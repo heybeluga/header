@@ -1,4 +1,5 @@
 import classNames from 'classnames'
+import { appendTrailingSlash } from './utils'
 
 import type { FunctionalComponent } from 'preact'
 import type { Link } from './types'
@@ -17,9 +18,6 @@ const buttonClassNames: string[] = [
   'hover:-translate-y-1',
   'focus:-translate-y-1'
 ]
-
-const appendTrailingSlash = (href: string): string =>
-  href.endsWith('/') ? href : `${href}/`
 
 export interface Props extends Link {
   background?: string
