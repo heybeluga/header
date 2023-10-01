@@ -1,5 +1,6 @@
 import classNames from 'classnames'
 import { Chevron } from './Chevron'
+import { NavDropdownColumn } from './NavDropdownColumn'
 import { capitalize } from './utils'
 
 import type { FunctionComponent } from 'preact'
@@ -66,7 +67,7 @@ export const NavDropdown: FunctionComponent<Props> = ({
         )}
       >
         {columns.map((columnProps: NavDropdownColumnProps) => (
-          <p>{columnProps.title}</p>
+          <NavDropdownColumn {...columnProps} />
         ))}
       </ul>
     </li>
