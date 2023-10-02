@@ -12,8 +12,6 @@ export const NavDropdownColumn: FunctionComponent<Props> = ({
   subtitle,
   groupHref,
   links,
-  svgName,
-  iconBackground,
   hoverBackground,
   hasHeader = false
 }: Props) => {
@@ -25,8 +23,6 @@ export const NavDropdownColumn: FunctionComponent<Props> = ({
           title={title}
           href={groupHref}
           subtitle={subtitle}
-          svgName={svgName}
-          iconBackground={iconBackground}
           hoverBackground={hoverBackground}
         />
       ) : (

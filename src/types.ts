@@ -13,8 +13,6 @@ export interface NavDropdownColumnProps {
   subtitle: string
   groupHref?: string
   links: Link[]
-  svgName: string
-  iconBackground?: string
   hoverBackground?: string
   hasHeader?: boolean
 }

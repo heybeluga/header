@@ -19,7 +19,7 @@ const buttonClassNames: string[] = [
   'focus:-translate-y-1'
 ]
 
-export interface Props extends Link {
+interface Props extends Link {
   background?: string
   focusBackground?: string
   fontSize?: string
