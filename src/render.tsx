@@ -1,3 +1,5 @@
+import './main.css'
+
 import { render } from 'preact'
 import { Header } from './index'
 
