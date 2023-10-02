@@ -1,4 +1,5 @@
 import classNames from 'classnames'
+import { NavDropdownColumnHeader } from './NavDropdownColumnHeader'
 import { appendTrailingSlash } from './utils'
 
 import type { FunctionComponent } from 'preact'
@@ -8,11 +9,29 @@ type Props = NavDropdownColumnProps
 
 export const NavDropdownColumn: FunctionComponent<Props> = ({
   title,
-  links
+  subtitle,
+  groupHref,
+  links,
+  svgName,
+  iconBackground,
+  hoverBackground,
+  hasHeader = false
 }: Props) => {
   return (
     <li>
       <h3 class="mb-10 font-bold text-lg">{title}</h3>
+      {hasHeader ? (
+        <NavDropdownColumnHeader
+          title={title}
+          href={groupHref}
+          subtitle={subtitle}
+          svgName={svgName}
+          iconBackground={iconBackground}
+          hoverBackground={hoverBackground}
+        />
+      ) : (
+        <h3 class="mb-10 font-bold text-lg">{title}</h3>
+      )}
       <ul>
         {links.map(({ href, text }: Link) => (
           <li>
