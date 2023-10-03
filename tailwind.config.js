@@ -2,7 +2,12 @@
 export default {
   content: ['./src/**/*.ts', './src/**/*.tsx'],
   theme: {
-    extend: {},
+    screens: {
+      mobile: '390px',
+      tablet: '768px',
+      desktop: '1024px',
+      full: '1440px'
+    }
   },
   plugins: [],
 }
