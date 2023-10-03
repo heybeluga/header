@@ -4,11 +4,11 @@ import { useEffect } from 'preact/hooks'
 import { ButtonLink } from './ButtonLink'
 import { Logo } from './Logo'
 import { NavDropdown } from './NavDropdown'
+import { NavHamburger } from './NavHamburger'
 import { HEADER_DROPDOWNS } from './header-content'
 import { mainDivClassNames } from './utils'
 
 import type { FunctionalComponent } from 'preact'
-import { NavHamburger } from './NavHamburger'
 import type { HeaderDropdown } from './types'
 
 type Props = Record<string, null>
