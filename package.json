@@ -1,8 +1,8 @@
 {
   "name": "@heybeluga/header",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "description": "Common headers and footers for Beluga's webapps",
-  "main": "dist/index.js",
+  "main": "dist/test.js",
   "type": "module",
   "scripts": {
     "build": "vite build",
@@ -19,7 +19,6 @@
     "url": "https://github.com/heybeluga/header/issues"
   },
   "homepage": "https://github.com/heybeluga/header#readme",
-  "types": "dist/index.d.ts",
   "dependencies": {
     "classnames": "^2.3.2",
     "dotenv": "^16.3.1",
