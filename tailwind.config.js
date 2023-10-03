@@ -2,7 +2,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 export default {
-  content: ['./src/**/*.ts', './src/**/*.tsx'],
+  content: ['./src/**/*.{ts,tsx}', './node_modules/flowbite/**/*.js'],
   theme: {
     extend: {
       fontFamily: {
@@ -17,5 +17,5 @@ export default {
       full: '1440px'
     }
   },
-  plugins: []
+  plugins: [require('flowbite/plugin')]
 }
