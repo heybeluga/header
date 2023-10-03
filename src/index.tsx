@@ -1,4 +1,6 @@
 import classNames from 'classnames'
+import { Dropdown } from 'flowbite'
+import { useEffect } from 'preact/hooks'
 import { ButtonLink } from './ButtonLink'
 import { Logo } from './Logo'
 import { NavDropdown } from './NavDropdown'
@@ -12,6 +14,40 @@ import type { HeaderDropdown } from './types'
 type Props = Record<string, null>
 
 export const Header: FunctionalComponent<Props> = () => {
+  useEffect(() => {
+    HEADER_DROPDOWNS.forEach(({ title }: { title: string }) => {
+      const targetElement: HTMLElement | null = document.getElementById(
+        `dropdown-${title}`
+      )
+      const triggerElement: HTMLElement | null = document.getElementById(
+        `dropdown-button-${title}`
+      )
+      if (targetElement == null || triggerElement == null) {
+        return
+      }
+
+      const caret: Element | null = document.getElementById(
+        `dropdown-caret-${title}`
+      )
+      if (caret == null) {
+        return
+      }
+
+      // eslint-disable-next-line no-new
+      new Dropdown(targetElement, triggerElement, {
+        offsetDistance: 7,
+        triggerType: 'hover',
+        delay: 200,
+        onHide: () => {
+          caret.classList.remove('rotate-180')
+        },
+        onShow: () => {
+          caret.classList.add('rotate-180')
+        }
+      })
+    })
+  }, [])
+
   return (
     <header class="not-prose bg-white">
       <nav
