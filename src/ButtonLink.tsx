@@ -1,5 +1,5 @@
 import classNames from 'classnames'
-import { appendTrailingSlash } from './utils'
+import { toFullUrl } from './utils'
 
 import type { FunctionalComponent } from 'preact'
 import type { Link } from './types'
@@ -46,7 +46,7 @@ export const ButtonLink: FunctionalComponent<Props> = ({
 }) => {
   return (
     <a
-      href={appendTrailingSlash(href)}
+      href={toFullUrl(href)}
       rel="prefetch"
       target={targetBlank ? '_blank' : '_self'}
       class={classNames(

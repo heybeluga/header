@@ -1,6 +1,6 @@
 import classNames from 'classnames'
 import { NavDropdownColumnHeader } from './NavDropdownColumnHeader'
-import { appendTrailingSlash } from './utils'
+import { toFullUrl } from './utils'
 
 import type { FunctionComponent } from 'preact'
 import type { Link, NavDropdownColumnProps } from './types'
@@ -17,7 +17,6 @@ export const NavDropdownColumn: FunctionComponent<Props> = ({
 }: Props) => {
   return (
     <li>
-      <h3 class="mb-10 font-bold text-lg">{title}</h3>
       {hasHeader ? (
         <NavDropdownColumnHeader
           title={title}
@@ -32,7 +31,7 @@ export const NavDropdownColumn: FunctionComponent<Props> = ({
         {links.map(({ href, text }: Link) => (
           <li>
             <a
-              href={appendTrailingSlash(href)}
+              href={toFullUrl(href)}
               class={classNames(
                 'static-link',
                 'block',
