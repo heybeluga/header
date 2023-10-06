@@ -25,14 +25,14 @@ export const NavDropdownColumn = ({
           hoverBackground={hoverBackground}
         />
       ) : (
-        <h3 class="mb-10 font-bold text-lg">{title}</h3>
+        <h3 className="mb-10 font-bold text-lg">{title}</h3>
       )}
       <ul>
         {links.map(({ href, text }: Link) => (
           <li>
             <a
               href={toFullUrl(href)}
-              class={classNames(
+              className={classNames(
                 'static-link',
                 'block',
                 'my-4',

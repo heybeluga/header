@@ -46,9 +46,9 @@ export const Header = (): React.JSX.Element => {
   }, [])
 
   return (
-    <header class="not-prose bg-white">
+    <header className="not-prose bg-white">
       <nav
-        class={classNames(
+        className={classNames(
           ...mainDivClassNames,
           'flex',
           'justify-between',
@@ -57,7 +57,7 @@ export const Header = (): React.JSX.Element => {
         )}
       >
         <div
-          class={classNames(
+          className={classNames(
             'w-full',
             'flex',
             'flex-wrap',
@@ -66,9 +66,9 @@ export const Header = (): React.JSX.Element => {
           )}
         >
           <Logo />
-          <div class="flex justify-between items-center">
-            <div class="flex desktop:order-2 ml-6">
-              <div class="hidden tablet:block">
+          <div className="flex justify-between items-center">
+            <div className="flex desktop:order-2 ml-6">
+              <div className="hidden tablet:block">
                 <ButtonLink
                   href="https://beluga.beehiiv.com/subscribe"
                   text="Subscribe"
@@ -77,7 +77,7 @@ export const Header = (): React.JSX.Element => {
               <button
                 data-collapse-toggle="nav-hamburger"
                 type="button"
-                class={classNames(
+                className={classNames(
                   'inline-flex',
                   'items-center',
                   'p-2',
@@ -89,9 +89,9 @@ export const Header = (): React.JSX.Element => {
                   'hover:bg-slate-100'
                 )}
               >
-                <span class="sr-only">Open main menu</span>
+                <span className="sr-only">Open main menu</span>
                 <svg
-                  class="w-6 h-6"
+                  className="w-6 h-6"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -105,7 +105,7 @@ export const Header = (): React.JSX.Element => {
               </button>
             </div>
             <div
-              class={classNames(
+              className={classNames(
                 'hidden',
                 'w-full',
                 'desktop:flex',
@@ -115,14 +115,14 @@ export const Header = (): React.JSX.Element => {
                 'desktop:order-1'
               )}
             >
-              <ul class="flex items-center">
+              <ul className="flex items-center">
                 {HEADER_DROPDOWNS.map(({ title, body }: HeaderDropdown) => (
                   <NavDropdown label={title} columns={body} />
                 ))}
               </ul>
             </div>
           </div>
-          <div id="nav-hamburger" class="hidden w-full desktop:hidden">
+          <div id="nav-hamburger" className="hidden w-full desktop:hidden">
             <NavHamburger />
           </div>
         </div>

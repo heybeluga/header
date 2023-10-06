@@ -49,7 +49,7 @@ export const ButtonLink = ({
       href={toFullUrl(href)}
       rel="prefetch"
       target={targetBlank ? '_blank' : '_self'}
-      class={classNames(
+      className={classNames(
         'not-prose',
         ...buttonClassNames,
         background,

@@ -19,7 +19,7 @@ export const NavDropdownColumnHeader = ({
     <>
       {href != null ? (
         <a
-          class={classNames(
+          className={classNames(
             'static-link',
             'group',
             'flex',
@@ -40,7 +40,7 @@ export const NavDropdownColumnHeader = ({
         </a>
       ) : (
         <div
-          class={classNames(
+          className={classNames(
             'flex',
             'items-center',
             'gap-4',

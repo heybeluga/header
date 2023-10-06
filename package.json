@@ -1,8 +1,8 @@
 {
   "name": "@heybeluga/header",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "description": "Common headers and footers for Beluga's webapps",
-  "main": "dist/test.js",
+  "main": "dist/header.js",
   "type": "module",
   "scripts": {
     "build": "vite build",

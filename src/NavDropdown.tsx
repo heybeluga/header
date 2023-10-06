@@ -13,10 +13,10 @@ interface Props {
 
 export const NavDropdown = ({ label, columns }: Props): React.JSX.Element => {
   return (
-    <li class="w-full">
+    <li className="w-full">
       <button
         id={`dropdown-button-${label}`}
-        class={classNames(
+        className={classNames(
           'flex',
           'items-center',
           'justify-between',
@@ -38,7 +38,7 @@ export const NavDropdown = ({ label, columns }: Props): React.JSX.Element => {
       >
         <div
           id={`dropdown-caret-${label}`}
-          class="mr-1 transition-transform ease-in-out duration-300"
+          className="mr-1 transition-transform ease-in-out duration-300"
         >
           <Chevron transform="rotate(90)" />
         </div>
@@ -46,7 +46,7 @@ export const NavDropdown = ({ label, columns }: Props): React.JSX.Element => {
       </button>
       <ul
         id={`dropdown-${label}`}
-        class={classNames(
+        className={classNames(
           'no-anchor',
           'z-10',
           'hidden',

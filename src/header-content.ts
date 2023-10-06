@@ -5,8 +5,6 @@ const TOOLS_COLUMNS: NavDropdownColumnProps[] = [
     title: 'Portfolio Tracker',
     subtitle: 'Your home for your crypto',
     groupHref: 'https://dashboard.heybeluga.com/',
-    svgName: 'chart-donut',
-    iconBackground: 'bg-blue-50',
     hoverBackground: 'hover:bg-blue-50',
     links: [],
     hasHeader: true
@@ -15,8 +13,6 @@ const TOOLS_COLUMNS: NavDropdownColumnProps[] = [
     title: 'Crypto Calendar',
     subtitle: 'Upcoming crypto events',
     groupHref: 'https://calendar.heybeluga.com/',
-    svgName: 'calendar-event',
-    iconBackground: 'bg-red-50',
     hoverBackground: 'hover:bg-red-50',
     links: [],
     hasHeader: true
@@ -26,7 +22,6 @@ const COMPARE_COLUMNS: NavDropdownColumnProps[] = [
   {
     title: 'Crypto Companies',
     subtitle: 'Crypto companies and their products',
-    svgName: 'wallet',
     links: [
       { href: '/comparisons/nft-marketplaces/', text: 'NFT Marketplaces' },
       {
@@ -41,7 +36,6 @@ const LEARN_COLUMNS: NavDropdownColumnProps[] = [
   {
     title: 'Blockchains',
     subtitle: 'The building blocks of crypto',
-    svgName: 'link',
     links: [
       { href: '/articles/bitcoin/', text: 'Bitcoin' },
       { href: '/articles/ethereum/', text: 'Ethereum' },
@@ -54,7 +48,6 @@ const LEARN_COLUMNS: NavDropdownColumnProps[] = [
   {
     title: 'DeFi',
     subtitle: 'Decentralized finance',
-    svgName: 'topology-star',
     links: [
       { href: '/articles/defi/', text: 'DeFi' },
       { href: '/articles/uniswap/', text: 'Uniswap' },
@@ -66,7 +59,6 @@ const LEARN_COLUMNS: NavDropdownColumnProps[] = [
   {
     title: 'NFTs',
     subtitle: 'Non-fungible tokens',
-    svgName: 'photo',
     links: [
       { href: '/articles/nfts/', text: 'Bored Ape Yacht Club' },
       { href: '/articles/opensea/', text: 'OpenSea' }

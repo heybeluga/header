@@ -10,7 +10,7 @@ export const NavHamburger = (): React.JSX.Element => {
     <ul
       id="nav-hamburger-accordion"
       data-accordion="collapse"
-      class="list-none pl-0"
+      className="list-none pl-0"
       data-active-classes="bg-none"
       data-inactive-classes="bg-none"
     >
@@ -29,7 +29,7 @@ export const NavHamburger = (): React.JSX.Element => {
                 'uppercase'
               ]}
             >
-              <h2 slot="title" class="font-medium text-left">
+              <h2 slot="title" className="font-medium text-left">
                 {title}
               </h2>
               <ul>

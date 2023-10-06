@@ -16,18 +16,18 @@ export const AccordionDropdown = ({
   expanded
 }: Props): React.JSX.Element => {
   return (
-    <li class="p-0 tablet:p-0 m-0 tablet:m-0">
+    <li className="p-0 tablet:p-0 m-0 tablet:m-0">
       <button
         id={`${id}-accordion-heading-${index}`}
         type="button"
-        class={classNames('group', ...headingClassNames)}
+        className={classNames('group', ...headingClassNames)}
         data-accordion-target={`#${id}-accordion-body-${index}`}
         aria-expanded={expanded}
       >
         <slot name="title" />
         <svg
           data-accordion-icon
-          class={classNames(
+          className={classNames(
             'w-6',
             'h-6',
             'mx-3',
@@ -48,7 +48,7 @@ export const AccordionDropdown = ({
           ></path>
         </svg>
       </button>
-      <div id={`${id}-accordion-body-${index}`} class="hidden">
+      <div id={`${id}-accordion-body-${index}`} className="hidden">
         <slot />
       </div>
     </li>

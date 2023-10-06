@@ -1,7 +1,3 @@
 export const Header = () => {
-  return (
-    <header class="not-prose bg-white">
-      Beluga Header
-    </header>
-  )
+  return <header className="not-prose bg-white">Beluga Header</header>
 }
