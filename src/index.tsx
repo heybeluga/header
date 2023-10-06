@@ -1,6 +1,6 @@
 import classNames from 'classnames'
 import { Dropdown } from 'flowbite'
-import { useEffect } from 'preact/hooks'
+import React, { useEffect } from 'react'
 import { ButtonLink } from './ButtonLink'
 import { Logo } from './Logo'
 import { NavDropdown } from './NavDropdown'
@@ -8,12 +8,9 @@ import { NavHamburger } from './NavHamburger'
 import { HEADER_DROPDOWNS } from './header-content'
 import { mainDivClassNames } from './utils'
 
-import type { FunctionalComponent } from 'preact'
 import type { HeaderDropdown } from './types'
 
-type Props = Record<string, null>
-
-export const Header: FunctionalComponent<Props> = () => {
+export const Header = (): React.JSX.Element => {
   useEffect(() => {
     HEADER_DROPDOWNS.forEach(({ title }: { title: string }) => {
       const targetElement: HTMLElement | null = document.getElementById(
