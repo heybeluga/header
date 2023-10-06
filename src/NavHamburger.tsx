@@ -1,13 +1,11 @@
+import React from 'react'
 import { AccordionDropdown } from './AccordionDropdown'
 import { NavDropdownColumnHeader } from './NavDropdownColumnHeader'
 import { HEADER_DROPDOWNS } from './header-content'
 
-import type { FunctionComponent } from 'preact'
 import type { HeaderDropdown, NavDropdownColumnProps } from './types'
 
-type Props = Record<string, never>
-
-export const NavHamburger: FunctionComponent<Props> = () => {
+export const NavHamburger = (): React.JSX.Element => {
   return (
     <ul
       id="nav-hamburger-accordion"

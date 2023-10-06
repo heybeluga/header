@@ -1,6 +1,5 @@
 import classNames from 'classnames'
-
-import type { FunctionComponent } from 'preact'
+import React from 'react'
 
 interface Props {
   children: any[]
@@ -10,12 +9,12 @@ interface Props {
   expanded?: boolean
 }
 
-export const AccordionDropdown: FunctionComponent<Props> = ({
+export const AccordionDropdown = ({
   id,
   index,
   headingClassNames,
   expanded
-}: Props) => {
+}: Props): React.JSX.Element => {
   return (
     <li class="p-0 tablet:p-0 m-0 tablet:m-0">
       <button

@@ -1,10 +1,10 @@
-import type { FunctionComponent } from 'preact'
+import React from 'react'
 
 interface Props {
   transform?: string
 }
 
-export const Chevron: FunctionComponent<Props> = ({ transform = '' }) => {
+export const Chevron = ({ transform = '' }: Props): React.JSX.Element => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

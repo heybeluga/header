@@ -1,14 +1,14 @@
-import type { FunctionComponent } from 'preact'
+import React from 'react'
 
 interface Props {
   title: string
   subtitle: string
 }
 
-export const NavDropdownColumnHeaderContent: FunctionComponent<Props> = ({
+export const NavDropdownColumnHeaderContent = ({
   title,
   subtitle
-}: Props) => {
+}: Props): React.JSX.Element => {
   return (
     <div>
       <h2 class="text-xl font-semibold group-hover:text-slate-800">{title}</h2>

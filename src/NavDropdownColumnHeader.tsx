@@ -1,7 +1,6 @@
 import classNames from 'classnames'
+import React from 'react'
 import { NavDropdownColumnHeaderContent } from './NavDropdownColumnHeaderContent'
-
-import type { FunctionComponent } from 'preact'
 
 interface Props {
   title: string
@@ -10,12 +9,12 @@ interface Props {
   hoverBackground?: string | undefined
 }
 
-export const NavDropdownColumnHeader: FunctionComponent<Props> = ({
+export const NavDropdownColumnHeader = ({
   title,
   href,
   subtitle,
   hoverBackground
-}: Props) => {
+}: Props): React.JSX.Element => {
   return (
     <>
       {href != null ? (

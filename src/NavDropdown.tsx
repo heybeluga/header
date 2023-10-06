@@ -1,9 +1,9 @@
 import classNames from 'classnames'
+import React from 'react'
 import { Chevron } from './Chevron'
 import { NavDropdownColumn } from './NavDropdownColumn'
 import { capitalize } from './utils'
 
-import type { FunctionComponent } from 'preact'
 import type { NavDropdownColumnProps } from './types'
 
 interface Props {
@@ -11,10 +11,7 @@ interface Props {
   columns: NavDropdownColumnProps[]
 }
 
-export const NavDropdown: FunctionComponent<Props> = ({
-  label,
-  columns
-}: Props) => {
+export const NavDropdown = ({ label, columns }: Props): React.JSX.Element => {
   return (
     <li class="w-full">
       <button

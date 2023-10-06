@@ -1,20 +1,20 @@
 import classNames from 'classnames'
+import React from 'react'
 import { NavDropdownColumnHeader } from './NavDropdownColumnHeader'
 import { toFullUrl } from './utils'
 
-import type { FunctionComponent } from 'preact'
 import type { Link, NavDropdownColumnProps } from './types'
 
 type Props = NavDropdownColumnProps
 
-export const NavDropdownColumn: FunctionComponent<Props> = ({
+export const NavDropdownColumn = ({
   title,
   subtitle,
   groupHref,
   links,
   hoverBackground,
   hasHeader = false
-}: Props) => {
+}: Props): React.JSX.Element => {
   return (
     <li>
       {hasHeader ? (

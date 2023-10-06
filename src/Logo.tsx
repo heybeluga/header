@@ -1,10 +1,10 @@
-import type { FunctionComponent } from 'preact'
+import React from 'react'
 
 interface Props {
   fill?: string
 }
 
-export const Logo: FunctionComponent<Props> = ({ fill = 'black' }) => {
+export const Logo = ({ fill = 'black' }: Props): React.JSX.Element => {
   return (
     <a rel="prefetch" href="/">
       <svg

@@ -1,7 +1,7 @@
 import classNames from 'classnames'
+import React from 'react'
 import { toFullUrl } from './utils'
 
-import type { FunctionalComponent } from 'preact'
 import type { Link } from './types'
 
 const buttonClassNames: string[] = [
@@ -31,7 +31,7 @@ interface Props extends Link {
   verticalPadding?: string
 }
 
-export const ButtonLink: FunctionalComponent<Props> = ({
+export const ButtonLink = ({
   href,
   text,
   background = 'bg-slate-800',
@@ -43,7 +43,7 @@ export const ButtonLink: FunctionalComponent<Props> = ({
   targetBlank = false,
   textColour = '!text-white',
   verticalPadding = 'py-3'
-}) => {
+}: Props): React.JSX.Element => {
   return (
     <a
       href={toFullUrl(href)}
