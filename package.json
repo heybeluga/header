@@ -1,6 +1,6 @@
 {
   "name": "@heybeluga/header",
-  "version": "0.0.31",
+  "version": "0.0.32",
   "description": "Common headers and footers for Beluga's webapps",
   "main": "dist/header.js",
   "type": "module",
@@ -19,30 +19,28 @@
     "url": "https://github.com/heybeluga/header/issues"
   },
   "homepage": "https://github.com/heybeluga/header#readme",
-  "dependencies": {
-    "classnames": "^2.3.2",
-    "dotenv": "^16.3.1",
-    "flowbite": "^1.8.1",
-    "vite": "^4.4.11"
-  },
   "peerDependencies": {
+    "flowbite": "^1.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/react": "^18.2.25",
-    "@types/react-dom": "^18.2.11",
-    "@typescript-eslint/eslint-plugin": "^6.7.4",
-    "@typescript-eslint/parser": "^6.7.4",
+    "@types/react": "^18.2.27",
+    "@types/react-dom": "^18.2.12",
+    "@typescript-eslint/eslint-plugin": "^6.7.5",
+    "@typescript-eslint/parser": "^6.7.5",
     "autoprefixer": "^10.4.16",
+    "classnames": "^2.3.2",
     "eslint": "^8.51.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-config-standard-with-typescript": "^39.1.1",
     "eslint-plugin-prettier": "^5.0.0",
+    "flowbite": "^1.8.1",
     "prettier": "^3.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "tailwindcss": "^3.3.3",
-    "typescript": "^4.9.5"
+    "typescript": "^4.9.5",
+    "vite": "^4.4.11"
   }
 }
