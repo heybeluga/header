@@ -1,4 +1,5 @@
 import classNames from 'classnames'
+import { Dropdown } from 'flowbite'
 import React, { useEffect } from 'react'
 import { ButtonLink } from './ButtonLink'
 import { Logo } from './Logo'
@@ -26,7 +27,6 @@ export const Header = (): React.JSX.Element => {
         `dropdown-caret-${title}`
       )
 
-      /*
       if (caret == null) {
         return
       }
@@ -43,7 +43,6 @@ export const Header = (): React.JSX.Element => {
           caret.classList.add('rotate-180')
         }
       })
-      */
     })
   }, [])
 
