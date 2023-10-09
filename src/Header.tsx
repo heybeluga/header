@@ -1,6 +1,5 @@
 import classNames from 'classnames'
-import { Dropdown } from 'flowbite'
-import React, { useEffect } from 'react'
+import React from 'react'
 import { ButtonLink } from './ButtonLink'
 import { Logo } from './Logo'
 import { NavDropdown } from './NavDropdown'
@@ -11,6 +10,7 @@ import { mainDivClassNames } from './utils'
 import type { HeaderDropdown } from './types'
 
 export const Header = (): React.JSX.Element => {
+  /*
   useEffect(() => {
     HEADER_DROPDOWNS.forEach(({ title }: { title: string }) => {
       const targetElement: HTMLElement | null = document.getElementById(
@@ -44,6 +44,7 @@ export const Header = (): React.JSX.Element => {
       })
     })
   }, [])
+  */
 
   return (
     <header className="not-prose bg-white">
