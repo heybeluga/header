@@ -12,11 +12,11 @@ export const Chevron = ({ transform = '' }: Props): React.JSX.Element => {
       width="18"
       height="18"
       viewBox="0 0 24 24"
-      stroke-width="2.5"
+      strokeWidth="2.5"
       stroke="currentColor"
       fill="none"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       transform={transform}
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
