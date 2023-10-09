@@ -1,5 +1,5 @@
 import classNames from 'classnames'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { ButtonLink } from './ButtonLink'
 import { Logo } from './Logo'
 import { NavDropdown } from './NavDropdown'
@@ -10,7 +10,6 @@ import { mainDivClassNames } from './utils'
 import type { HeaderDropdown } from './types'
 
 export const Header = (): React.JSX.Element => {
-  /*
   useEffect(() => {
     HEADER_DROPDOWNS.forEach(({ title }: { title: string }) => {
       const targetElement: HTMLElement | null = document.getElementById(
@@ -26,6 +25,8 @@ export const Header = (): React.JSX.Element => {
       const caret: Element | null = document.getElementById(
         `dropdown-caret-${title}`
       )
+
+      /*
       if (caret == null) {
         return
       }
@@ -42,9 +43,9 @@ export const Header = (): React.JSX.Element => {
           caret.classList.add('rotate-180')
         }
       })
+      */
     })
   }, [])
-  */
 
   return (
     <header className="not-prose bg-white">
