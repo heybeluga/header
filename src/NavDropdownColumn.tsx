@@ -29,7 +29,7 @@ export const NavDropdownColumn = ({
       )}
       <ul>
         {links.map(({ href, text }: Link) => (
-          <li>
+          <li key={text}>
             <a
               href={toFullUrl(href)}
               className={classNames(

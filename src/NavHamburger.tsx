@@ -19,6 +19,7 @@ export const NavHamburger = (): React.JSX.Element => {
           return (
             <AccordionDropdown
               id="nav-hamburger"
+              key={title}
               index={index}
               headingClassNames={[
                 'flex',
@@ -34,7 +35,7 @@ export const NavHamburger = (): React.JSX.Element => {
               </h2>
               <ul>
                 {body.map((props: NavDropdownColumnProps) => (
-                  <li>
+                  <li key={props.title}>
                     <NavDropdownColumnHeader {...props} />
                   </li>
                 ))}

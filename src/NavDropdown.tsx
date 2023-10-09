@@ -64,7 +64,7 @@ export const NavDropdown = ({ label, columns }: Props): React.JSX.Element => {
         )}
       >
         {columns.map((columnProps: NavDropdownColumnProps) => (
-          <NavDropdownColumn {...columnProps} />
+          <NavDropdownColumn key={columnProps.title} {...columnProps} />
         ))}
       </ul>
     </li>

@@ -119,7 +119,7 @@ export const Header = (): React.JSX.Element => {
             >
               <ul className="flex items-center">
                 {HEADER_DROPDOWNS.map(({ title, body }: HeaderDropdown) => (
-                  <NavDropdown label={title} columns={body} />
+                  <NavDropdown key={title} label={title} columns={body} />
                 ))}
               </ul>
             </div>
