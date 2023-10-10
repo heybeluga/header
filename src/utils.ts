@@ -3,8 +3,10 @@ const BASE_URL = 'https://heybeluga.com'
 export const capitalize = (word: string): string =>
   word.charAt(0).toUpperCase() + word.slice(1)
 
-export const toFullUrl = (href: string): string =>
-  href.endsWith('/') ? `${BASE_URL}${href}` : `${BASE_URL}${href}/`
+export const toFullUrl = (href: string): string => {
+  const url = href.startsWith('/') ? `${BASE_URL}${href}` : href
+  return url.endsWith('/') ? url : `${url}/`
+}
 
 export const MAIN_WRAPPER_WIDTH_CLASSES: string[] = [
   'px-4',
