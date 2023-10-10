@@ -5,8 +5,9 @@ import dts from 'vite-plugin-dts'
 export default defineConfig({
   build: {
     lib: {
-      entry: resolve(__dirname, 'src/index.ts'),
-      name: 'header'
+      entry: resolve(__dirname, 'src/Header.tsx'),
+      name: 'header',
+      formats: ['es']
     },
     rollupOptions: {
       external: ['react', 'react-dom'],
