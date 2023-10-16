@@ -29,10 +29,8 @@ export const NavHamburger = (): React.JSX.Element => {
                 'p-5',
                 'uppercase'
               ]}
+              titleChild={<h2 className="font-medium text-left">{title}</h2>}
             >
-              <h2 slot="title" className="font-medium text-left">
-                {title}
-              </h2>
               <ul>
                 {body.map((props: NavDropdownColumnProps) => (
                   <li key={props.title}>

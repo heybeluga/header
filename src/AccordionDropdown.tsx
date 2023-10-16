@@ -2,18 +2,21 @@ import classNames from 'classnames'
 import React from 'react'
 
 interface Props {
-  children: any[]
+  children: React.ReactNode
   id: string
   index: number
   headingClassNames: string[]
   expanded?: boolean
+  titleChild: React.ReactNode
 }
 
 export const AccordionDropdown = ({
+  children,
   id,
   index,
   headingClassNames,
-  expanded
+  expanded,
+  titleChild
 }: Props): React.JSX.Element => {
   return (
     <li className="p-0 tablet:p-0 m-0 tablet:m-0">
@@ -24,7 +27,7 @@ export const AccordionDropdown = ({
         data-accordion-target={`#${id}-accordion-body-${index}`}
         aria-expanded={expanded}
       >
-        <slot name="title" />
+        {titleChild}
         <svg
           data-accordion-icon
           className={classNames(
@@ -49,7 +52,7 @@ export const AccordionDropdown = ({
         </svg>
       </button>
       <div id={`${id}-accordion-body-${index}`} className="hidden">
-        <slot />
+        {children}
       </div>
     </li>
   )
