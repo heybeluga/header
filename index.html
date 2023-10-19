@@ -18,11 +18,16 @@
       type="font/woff2"
       crossorigin="anonymous"
     />
+    <style>
+      body { background-color: red; }
+      a { color: blue; }
+      a:hover { color: darkblue; }
+      a:not(.static-link):visited { color: darkviolet; }
+      a:not(.static-link):visited:hover { color: indigo; }
+    </style>
   </head>
   <body>
-    <div style="background-color:red; height:100vh">
-      <div id="app"></div>
-    </div>
+    <div id="app"></div>
     <script type="module" src="/src/render.tsx"></script>
     <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
   </body>

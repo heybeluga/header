@@ -30,11 +30,11 @@ export const NavDropdownColumnHeaderContent = ({
         </div>
       )}
       <div>
-        <h2 className="text-xl font-semibold group-hover:text-slate-800">
+        <h2 className="text-xl font-semibold">
           {title}
         </h2>
         {subtitle != null && (
-          <h3 className="text-sm font-light group-hover:text-slate-800">
+          <h3 className="text-sm font-light">
             {subtitle}
           </h3>
         )}

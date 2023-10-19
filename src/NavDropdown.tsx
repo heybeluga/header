@@ -71,6 +71,7 @@ export const NavDropdown = ({
               </ul>
               <a
                 className={classNames(
+                  'static-link',
                   'font-medium',
                   'text-sm',
                   'text-center',

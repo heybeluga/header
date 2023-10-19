@@ -11,6 +11,7 @@ export const NavDropdownArticleLink = ({
     <li>
       <a
         className={classNames(
+          'static-link',
           'group',
           'flex',
           'items-center',

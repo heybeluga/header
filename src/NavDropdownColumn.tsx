@@ -35,6 +35,7 @@ export const NavDropdownColumn = ({
             <a
               href={toFullUrl(href)}
               className={classNames(
+                'static-link',
                 'block',
                 'my-4',
                 'py-2',

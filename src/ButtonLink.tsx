@@ -50,6 +50,7 @@ export const ButtonLink = ({
       rel="prefetch"
       target={targetBlank ? '_blank' : '_self'}
       className={classNames(
+        'static-link',
         'not-prose',
         ...buttonClassNames,
         background,

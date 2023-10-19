@@ -22,6 +22,7 @@ export const NavDropdownColumnHeader = ({
       {groupHref != null ? (
         <a
           className={classNames(
+            'static-link',
             'group',
             'flex',
             'items-center',
