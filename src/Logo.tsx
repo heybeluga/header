@@ -6,7 +6,7 @@ interface Props {
 
 export const Logo = ({ fill = 'black' }: Props): React.JSX.Element => {
   return (
-    <a rel="prefetch" href="/">
+    <a rel="prefetch" href="https://heybeluga.com/">
       <svg
         width="160"
         height="46"

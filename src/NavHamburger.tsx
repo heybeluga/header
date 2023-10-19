@@ -3,6 +3,7 @@ import { AccordionDropdown } from './AccordionDropdown'
 import { NavDropdownColumnHeader } from './NavDropdownColumnHeader'
 import { HEADER_DROPDOWNS } from './header-content'
 
+import classNames from 'classnames'
 import type { HeaderDropdown, NavDropdownColumnProps } from './types'
 
 export const NavHamburger = (): React.JSX.Element => {
@@ -11,7 +12,7 @@ export const NavHamburger = (): React.JSX.Element => {
       id="nav-hamburger-accordion"
       data-accordion="collapse"
       className="list-none pl-0"
-      data-active-classes="bg-none"
+      data-active-classes="bg-slate-50 text-blue-500"
       data-inactive-classes="bg-none"
     >
       {HEADER_DROPDOWNS.map(
@@ -26,10 +27,24 @@ export const NavHamburger = (): React.JSX.Element => {
                 'items-center',
                 'justify-between',
                 'w-full',
-                'p-5',
+                'pl-8',
+                'pr-4',
+                'py-5',
                 'uppercase'
               ]}
-              titleChild={<h2 className="font-medium text-left">{title}</h2>}
+              titleChild={
+                <h2
+                  className={classNames(
+                    'font-heading',
+                    'font-medium',
+                    'text-xl',
+                    'text-left',
+                    '!text-slate-800'
+                  )}
+                >
+                  {title}
+                </h2>
+              }
             >
               <ul>
                 {body.map((props: NavDropdownColumnProps) => (

@@ -52,18 +52,18 @@ export const Header = (): React.JSX.Element => {
     <header className="not-prose bg-white">
       <nav
         className={classNames(
-          ...mainDivClassNames,
           'flex',
-          'justify-between',
+          'flex-wrap',
           'items-center',
+          'justify-between',
           'py-4'
         )}
       >
         <div
           className={classNames(
+            ...mainDivClassNames,
             'w-full',
             'flex',
-            'flex-wrap',
             'items-center',
             'justify-between'
           )}
@@ -90,6 +90,7 @@ export const Header = (): React.JSX.Element => {
                   'ml-3',
                   'text-sm',
                   'text-slate-500',
+                  'hover:text-blue-500',
                   'rounded-lg',
                   'desktop:hidden',
                   'hover:bg-slate-100'
@@ -152,9 +153,9 @@ export const Header = (): React.JSX.Element => {
               </ul>
             </div>
           </div>
-          <div id="nav-hamburger" className="hidden w-full desktop:hidden">
-            <NavHamburger />
-          </div>
+        </div>
+        <div id="nav-hamburger" className="hidden w-full desktop:hidden">
+          <NavHamburger />
         </div>
       </nav>
     </header>
