@@ -19,7 +19,7 @@ export const NavDropdownArticleLink = ({
           'rounded-3xl',
           'border',
           'border-transparent',
-          'tablet:border-slate-300',
+          'desktop:border-slate-300',
           'text-slate-800',
           'hover:text-slate-500',
           'bg-white',

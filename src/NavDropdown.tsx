@@ -54,7 +54,7 @@ export const NavDropdown = ({
               'p-6',
               'gap-x-4',
               'gap-y-0',
-              'tablet:gap-y-4'
+              'desktop:gap-y-4'
             )}
           >
             {body.map((columnProps: NavDropdownColumnProps) => (
