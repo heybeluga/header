@@ -4,23 +4,24 @@ import { NavDropdownColumnHeaderContent } from './NavDropdownColumnHeaderContent
 
 interface Props {
   title: string
-  href?: string | undefined
+  groupHref?: string | undefined
   subtitle: string
   hoverBackground?: string | undefined
+  image?: React.JSX.Element | undefined
 }
 
 export const NavDropdownColumnHeader = ({
   title,
-  href,
+  groupHref,
   subtitle,
-  hoverBackground
+  hoverBackground,
+  image
 }: Props): React.JSX.Element => {
   return (
     <>
-      {href != null ? (
+      {groupHref != null ? (
         <a
           className={classNames(
-            'static-link',
             'group',
             'flex',
             'items-center',
@@ -34,9 +35,13 @@ export const NavDropdownColumnHeader = ({
             'hover:text-slate-500',
             hoverBackground
           )}
-          href={href}
+          href={groupHref}
         >
-          <NavDropdownColumnHeaderContent title={title} subtitle={subtitle} />
+          <NavDropdownColumnHeaderContent
+            title={title}
+            subtitle={subtitle}
+            image={image}
+          />
         </a>
       ) : (
         <div
@@ -49,7 +54,11 @@ export const NavDropdownColumnHeader = ({
             'border-transparent'
           )}
         >
-          <NavDropdownColumnHeaderContent title={title} subtitle={subtitle} />
+          <NavDropdownColumnHeaderContent
+            title={title}
+            subtitle={subtitle}
+            image={image}
+          />
         </div>
       )}
     </>

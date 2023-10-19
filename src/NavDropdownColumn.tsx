@@ -20,7 +20,7 @@ export const NavDropdownColumn = ({
       {hasHeader ? (
         <NavDropdownColumnHeader
           title={title}
-          href={groupHref}
+          groupHref={groupHref}
           subtitle={subtitle}
           hoverBackground={hoverBackground}
         />
@@ -33,7 +33,6 @@ export const NavDropdownColumn = ({
             <a
               href={toFullUrl(href)}
               className={classNames(
-                'static-link',
                 'block',
                 'my-4',
                 'py-2',

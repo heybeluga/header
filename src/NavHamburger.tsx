@@ -36,7 +36,7 @@ export const NavHamburger = (): React.JSX.Element => {
                 <h2
                   className={classNames(
                     'font-heading',
-                    'font-medium',
+                    'font-semibold',
                     'text-xl',
                     'text-left',
                     '!text-slate-800'
@@ -46,7 +46,7 @@ export const NavHamburger = (): React.JSX.Element => {
                 </h2>
               }
             >
-              <ul>
+              <ul className="pt-4 px-5">
                 {body.map((props: NavDropdownColumnProps) => (
                   <li key={props.title}>
                     <NavDropdownColumnHeader {...props} />
