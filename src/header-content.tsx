@@ -1438,16 +1438,22 @@ export const HEADER_DROPDOWNS: HeaderDropdown[] = [
           'https://heybeluga.com/images/external/5188ebb1-cfde-4ccc-a859-15c367ec6ea9.png'
       },
       {
+        href: 'https://heybeluga.com/articles/pudgy-penguins-nfts-toys/',
+        text: 'Can Pudgy Penguins NFTs Create a Successful Toy Business and Create Value for Holders?',
+        imageUrl:
+          'https://heybeluga.com/images/external/e17657ef-bfe7-4135-a869-afaa17f59075.png'
+      },
+      {
+        href: 'https://heybeluga.com/articles/sbf-jail/',
+        text: 'A Glimpse into SBF’s Life Inside the Metropolitan Detention Center in Brooklyn',
+        imageUrl:
+          'https://heybeluga.com/images/external/39c5f505-0467-44d5-a34d-0c50b36b3ed7.png'
+      },
+      {
         href: 'https://heybeluga.com/articles/vara-network/',
         text: 'Vara Network: On-Chain Game Building With Smart Contracts',
         imageUrl:
           'https://heybeluga.com/images/external/456613e8-ca45-432e-a78c-5d81b887baa2.png'
-      },
-      {
-        href: 'https://heybeluga.com/articles/litecoin-nfts/',
-        text: 'Litecoin NFTs: Developers Bring Ordinals to the LTC Network',
-        imageUrl:
-          'https://heybeluga.com/images/external/3a28eb75-380f-4972-88b5-9215f6e155ae.png'
       }
     ]
   },
