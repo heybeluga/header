@@ -1,6 +1,6 @@
 import classNames from 'classnames'
 import { Dropdown } from 'flowbite'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { ButtonLink } from './ButtonLink'
 import { Logo } from './Logo'
 import { NavDropdown } from './NavDropdown'
@@ -11,6 +11,8 @@ import { mainDivClassNames } from './utils'
 import type { HeaderDropdown } from './types'
 
 export const Header = (): React.JSX.Element => {
+  const [isOpen, setIsOpen] = useState(false)
+
   useEffect(() => {
     HEADER_DROPDOWNS.forEach(({ title }: { title: string }) => {
       const targetElement: HTMLElement | null = document.getElementById(
@@ -78,6 +80,9 @@ export const Header = (): React.JSX.Element => {
               <button
                 data-collapse-toggle="nav-hamburger"
                 type="button"
+                onClick={() => {
+                  setIsOpen(!isOpen)
+                }}
                 className={classNames(
                   'inline-flex',
                   'items-center',
@@ -91,18 +96,42 @@ export const Header = (): React.JSX.Element => {
                 )}
               >
                 <span className="sr-only">Open main menu</span>
-                <svg
-                  className="w-6 h-6"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                    clipRule="evenodd"
-                  ></path>
-                </svg>
+                {isOpen ? (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="icon icon-tabler icon-tabler-x"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M18 6l-12 12"></path>
+                    <path d="M6 6l12 12"></path>
+                  </svg>
+                ) : (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="icon icon-tabler icon-tabler-menu-2"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M4 6l16 0"></path>
+                    <path d="M4 12l16 0"></path>
+                    <path d="M4 18l16 0"></path>
+                  </svg>
+                )}
               </button>
             </div>
             <div
