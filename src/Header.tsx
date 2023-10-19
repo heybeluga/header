@@ -6,9 +6,8 @@ import { Logo } from './Logo'
 import { NavDropdown } from './NavDropdown'
 import { NavHamburger } from './NavHamburger'
 import { HEADER_DROPDOWNS } from './header-content'
+import { type HeaderDropdown } from './types'
 import { mainDivClassNames } from './utils'
-
-import type { HeaderDropdown } from './types'
 
 export const Header = (): React.JSX.Element => {
   const [isOpen, setIsOpen] = useState(false)
@@ -35,7 +34,7 @@ export const Header = (): React.JSX.Element => {
 
       // eslint-disable-next-line no-new
       new Dropdown(targetElement, triggerElement, {
-        offsetDistance: 7,
+        offsetDistance: 20,
         triggerType: 'hover',
         delay: 200,
         onHide: () => {
@@ -62,6 +61,7 @@ export const Header = (): React.JSX.Element => {
         <div
           className={classNames(
             ...mainDivClassNames,
+            'pb-4',
             'w-full',
             'flex',
             'items-center',
@@ -146,9 +146,9 @@ export const Header = (): React.JSX.Element => {
                 'desktop:order-1'
               )}
             >
-              <ul className="flex items-center">
-                {HEADER_DROPDOWNS.map(({ title, body }: HeaderDropdown) => (
-                  <NavDropdown key={title} label={title} columns={body} />
+              <ul className="flex items-center gap-4">
+                {HEADER_DROPDOWNS.map((headerDropdown: HeaderDropdown) => (
+                  <NavDropdown {...headerDropdown} />
                 ))}
               </ul>
             </div>

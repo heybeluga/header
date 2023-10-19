@@ -4,18 +4,18 @@ import { Chevron } from './Chevron'
 import { NavDropdownColumn } from './NavDropdownColumn'
 import { capitalize } from './utils'
 
-import type { NavDropdownColumnProps } from './types'
+import { NavDropdownArticleLink } from './NavDropdownArticleLink'
+import type { HeaderDropdown, Link, NavDropdownColumnProps } from './types'
 
-interface Props {
-  label: string
-  columns: NavDropdownColumnProps[]
-}
-
-export const NavDropdown = ({ label, columns }: Props): React.JSX.Element => {
+export const NavDropdown = ({
+  title,
+  body,
+  articleLinks
+}: HeaderDropdown): React.JSX.Element => {
   return (
     <li className="w-full">
       <button
-        id={`dropdown-button-${label}`}
+        id={`dropdown-button-${title}`}
         className={classNames(
           'flex',
           'items-center',
@@ -37,36 +37,53 @@ export const NavDropdown = ({ label, columns }: Props): React.JSX.Element => {
         )}
       >
         <div
-          id={`dropdown-caret-${label}`}
+          id={`dropdown-caret-${title}`}
           className="mr-1 transition-transform ease-in-out duration-300"
         >
           <Chevron transform="rotate(90)" />
         </div>
-        {capitalize(label)}
+        {capitalize(title)}
       </button>
-      <ul
-        id={`dropdown-${label}`}
-        className={classNames(
-          'no-anchor',
-          'z-10',
-          'hidden',
-          'grid',
-          'w-auto',
-          'p-10',
-          'gap-x-28',
-          'rounded-xl',
-          'bg-white',
-          'border',
-          'border-slate-200',
-          { 'grid-cols-2': columns.length === 2 },
-          { 'grid-cols-3': columns.length === 3 },
-          { 'grid-cols-4': columns.length === 4 }
-        )}
-      >
-        {columns.map((columnProps: NavDropdownColumnProps) => (
-          <NavDropdownColumn key={columnProps.title} {...columnProps} />
-        ))}
-      </ul>
+      <div id={`dropdown-${title}`} className="z-10 hidden overflow-hidden">
+        <div className="flex rounded-xl border border-slate-200">
+          <ul
+            className={classNames(
+              'no-anchor',
+              articleLinks.length > 0 ? 'flex flex-col' : 'grid grid-cols-4',
+              'w-auto',
+              'p-6',
+              'gap-x-4',
+              'gap-y-0',
+              'tablet:gap-y-4'
+            )}
+          >
+            {body.map((columnProps: NavDropdownColumnProps) => (
+              <NavDropdownColumn key={columnProps.title} {...columnProps} />
+            ))}
+          </ul>
+          {articleLinks.length > 0 && (
+            <div className="flex flex-col gap-4 p-6 bg-slate-100 rounded-r-xl">
+              <h3 className="text-lg font-bold">Popular Articles</h3>
+              <ul className="flex flex-col gap-4">
+                {articleLinks.map((link: Link) => (
+                  <NavDropdownArticleLink key={link.href} {...link} />
+                ))}
+              </ul>
+              <a
+                className={classNames(
+                  'font-medium',
+                  'text-sm',
+                  'text-center',
+                  'text-blue-500'
+                )}
+                href="https://heybeluga.com/articles/"
+              >
+                View All Articles
+              </a>
+            </div>
+          )}
+        </div>
+      </div>
     </li>
   )
 }

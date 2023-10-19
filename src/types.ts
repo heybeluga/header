@@ -1,11 +1,13 @@
 export interface HeaderDropdown {
   title: string
   body: NavDropdownColumnProps[]
+  articleLinks: Link[]
 }
 
 export interface Link {
   href: string
   text: string
+  imageUrl?: string
 }
 
 export interface NavDropdownColumnProps {

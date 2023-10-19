@@ -26,11 +26,13 @@ export const NavDropdownColumnHeader = ({
             'flex',
             'items-center',
             'gap-4',
-            'p-4',
+            'py-4',
+            'pl-4',
+            'pr-10',
             'rounded-3xl',
             'border',
-            'border-2',
             'border-transparent',
+            'tablet:border-slate-300',
             'text-slate-800',
             'hover:text-slate-500',
             hoverBackground
@@ -51,7 +53,8 @@ export const NavDropdownColumnHeader = ({
             'gap-4',
             'p-4',
             'border',
-            'border-transparent'
+            'border-transparent',
+            'tablet:border-slate-300'
           )}
         >
           <NavDropdownColumnHeaderContent

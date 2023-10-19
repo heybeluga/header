@@ -13,6 +13,7 @@ export const NavDropdownColumn = ({
   groupHref,
   links,
   hoverBackground,
+  image,
   hasHeader = false
 }: Props): React.JSX.Element => {
   return (
@@ -23,6 +24,7 @@ export const NavDropdownColumn = ({
           groupHref={groupHref}
           subtitle={subtitle}
           hoverBackground={hoverBackground}
+          image={image}
         />
       ) : (
         <h3 className="mb-10 font-bold text-lg">{title}</h3>

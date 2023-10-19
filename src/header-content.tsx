@@ -1403,7 +1403,53 @@ const LEARN_COLUMNS: NavDropdownColumnProps[] = [
 ]
 
 export const HEADER_DROPDOWNS: HeaderDropdown[] = [
-  { title: 'Tools', body: TOOLS_COLUMNS },
-  { title: 'Compare', body: COMPARE_COLUMNS },
-  { title: 'Learn', body: LEARN_COLUMNS }
+  {
+    title: 'Tools',
+    body: TOOLS_COLUMNS,
+    articleLinks: [
+      {
+        href: 'https://heybeluga.com/articles/bitcoin-gold/',
+        text: 'Bitcoin Gold: Everything to Know',
+        imageUrl:
+          'https://heybeluga.com/images/external/ba7e3a2f-b1c7-4d73-8a65-33f1eca963ed.png'
+      },
+      {
+        href: 'https://heybeluga.com/articles/ordinals-vs-ethereum-nfts/',
+        text: 'The Wild World of NFTs: Bitcoin Ordinals vs. Ethereum NFTs',
+        imageUrl:
+          'https://heybeluga.com/images/external/20766420-e61b-43ad-a973-ceb930436afa.png'
+      },
+      {
+        href: 'https://heybeluga.com/articles/origins-of-hodl/',
+        text: 'Origins of the Word "HODL"',
+        imageUrl:
+          'https://heybeluga.com/images/external/fae36277-9d16-4e8f-87df-996b70573955.png'
+      }
+    ]
+  },
+  {
+    title: 'Compare',
+    body: COMPARE_COLUMNS,
+    articleLinks: [
+      {
+        href: 'https://heybeluga.com/articles/solana-mobile/',
+        text: "Solana's Saga Mobile Phone: A Vibrant Crypto Ecosystem",
+        imageUrl:
+          'https://heybeluga.com/images/external/5188ebb1-cfde-4ccc-a859-15c367ec6ea9.png'
+      },
+      {
+        href: 'https://heybeluga.com/articles/vara-network/',
+        text: 'Vara Network: On-Chain Game Building With Smart Contracts',
+        imageUrl:
+          'https://heybeluga.com/images/external/456613e8-ca45-432e-a78c-5d81b887baa2.png'
+      },
+      {
+        href: 'https://heybeluga.com/articles/litecoin-nfts/',
+        text: 'Litecoin NFTs: Developers Bring Ordinals to the LTC Network',
+        imageUrl:
+          'https://heybeluga.com/images/external/3a28eb75-380f-4972-88b5-9215f6e155ae.png'
+      }
+    ]
+  },
+  { title: 'Learn', body: LEARN_COLUMNS, articleLinks: [] }
 ]
