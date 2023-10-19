@@ -1233,7 +1233,7 @@ const LEARN_COLUMNS: NavDropdownColumnProps[] = [
     )
   },
   {
-    title: 'Communities',
+    title: 'Community',
     groupHref: 'https://heybeluga.com/articles/',
     hoverBackground: 'hover:bg-slate-50',
     links: [],
