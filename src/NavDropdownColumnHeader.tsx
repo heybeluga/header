@@ -5,7 +5,7 @@ import { NavDropdownColumnHeaderContent } from './NavDropdownColumnHeaderContent
 interface Props {
   title: string
   groupHref?: string | undefined
-  subtitle: string
+  subtitle?: string | undefined
   hoverBackground?: string | undefined
   image?: React.JSX.Element | undefined
 }

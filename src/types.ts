@@ -10,7 +10,7 @@ export interface Link {
 
 export interface NavDropdownColumnProps {
   title: string
-  subtitle: string
+  subtitle?: string
   groupHref?: string
   links: Link[]
   hoverBackground?: string
