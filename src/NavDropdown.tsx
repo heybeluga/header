@@ -45,7 +45,7 @@ export const NavDropdown = ({
         {capitalize(title)}
       </button>
       <div id={`dropdown-${title}`} className="z-10 hidden overflow-hidden">
-        <div className="flex rounded-xl border border-slate-200">
+        <div className="flex rounded-xl border border-slate-200 bg-white">
           <ul
             className={classNames(
               'no-anchor',

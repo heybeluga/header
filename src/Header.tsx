@@ -34,7 +34,7 @@ export const Header = (): React.JSX.Element => {
 
       // eslint-disable-next-line no-new
       new Dropdown(targetElement, triggerElement, {
-        offsetDistance: 20,
+        offsetDistance: 23,
         triggerType: 'hover',
         delay: 200,
         onHide: () => {
@@ -61,7 +61,6 @@ export const Header = (): React.JSX.Element => {
         <div
           className={classNames(
             ...mainDivClassNames,
-            'pb-4',
             'w-full',
             'flex',
             'items-center',
