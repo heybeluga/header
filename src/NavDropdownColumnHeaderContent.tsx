@@ -30,14 +30,8 @@ export const NavDropdownColumnHeaderContent = ({
         </div>
       )}
       <div>
-        <h2 className="text-xl font-semibold">
-          {title}
-        </h2>
-        {subtitle != null && (
-          <h3 className="text-sm font-light">
-            {subtitle}
-          </h3>
-        )}
+        <h2 className="text-xl font-semibold">{title}</h2>
+        {subtitle != null && <h3 className="text-sm font-light">{subtitle}</h3>}
       </div>
     </>
   )

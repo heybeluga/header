@@ -9,7 +9,15 @@ import { HEADER_DROPDOWNS } from './header-content'
 import { type HeaderDropdown } from './types'
 import { mainDivClassNames } from './utils'
 
-export const Header = (): React.JSX.Element => {
+interface Props {
+  showSubscribe?: boolean
+  children?: React.ReactNode
+}
+
+export const Header = ({
+  showSubscribe = true,
+  children
+}: Props): React.JSX.Element => {
   const [isOpen, setIsOpen] = useState(false)
 
   useEffect(() => {
@@ -68,14 +76,16 @@ export const Header = (): React.JSX.Element => {
           )}
         >
           <Logo />
-          <div className="flex justify-between items-center">
-            <div className="flex desktop:order-2 ml-6">
-              <div className="hidden tablet:block">
-                <ButtonLink
-                  href="https://beluga.beehiiv.com/subscribe"
-                  text="Subscribe"
-                />
-              </div>
+          <div className="flex gap-4 justify-between items-center">
+            <div className="flex desktop:order-3">
+              {showSubscribe && (
+                <div className="hidden tablet:block ml-2">
+                  <ButtonLink
+                    href="https://beluga.beehiiv.com/subscribe"
+                    text="Subscribe"
+                  />
+                </div>
+              )}
               <button
                 data-collapse-toggle="nav-hamburger"
                 type="button"
@@ -151,6 +161,11 @@ export const Header = (): React.JSX.Element => {
                 ))}
               </ul>
             </div>
+            {children != null && (
+              <div className="hidden desktop:block desktop:order-2">
+                {children}
+              </div>
+            )}
           </div>
         </div>
         <div id="nav-hamburger" className="hidden w-full desktop:hidden">
