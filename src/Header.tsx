@@ -1,6 +1,6 @@
 import classNames from 'classnames'
 import { Dropdown } from 'flowbite'
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { ButtonLink } from './ButtonLink'
 import { Logo } from './Logo'
 import { NavDropdown } from './NavDropdown'
@@ -8,17 +8,77 @@ import { NavHamburger } from './NavHamburger'
 import { HEADER_DROPDOWNS } from './header-content'
 import { type HeaderDropdown } from './types'
 import { mainDivClassNames } from './utils'
+import TbSun from './assets/TbSun'
+import TbMoon from './assets/TbMoon'
 
 interface Props {
   showSubscribe?: boolean
   children?: React.ReactNode
+  showThemeToggler?: boolean
 }
 
 export const Header = ({
   showSubscribe = true,
-  children
+  children,
+  showThemeToggler = false
 }: Props): React.JSX.Element => {
   const [isOpen, setIsOpen] = useState(false)
+  const [isDarkTheme, setIsDarkTheme] = useState<boolean>(false)
+  const [isUpdateBlocked, setIsUpdateBlocked] = useState<boolean>(true)
+
+  const toggleTheme = useCallback(() => {
+    setIsDarkTheme((dark: boolean) => {
+      if (dark) {
+        localStorage.setItem('theme_flag', 'light')
+        return false
+      } else {
+        localStorage.setItem('theme_flag', 'dark')
+        return true
+      }
+    })
+  }, [])
+
+  useEffect(() => {
+    const cachedTheme = localStorage?.getItem('theme_flag')
+    if (cachedTheme === 'dark') {
+      setIsDarkTheme(true)
+    } else if (cachedTheme === 'light') {
+      setIsDarkTheme(false)
+    } else if (typeof window !== 'undefined') {
+      const mediaQueryList: MediaQueryList = window.matchMedia(
+        '(prefers-color-scheme: dark)'
+      )
+      const handleMediaChange = (e: MediaQueryListEvent): void => {
+        if (localStorage?.getItem('theme_flag') == null) {
+          setIsDarkTheme(e.matches)
+        }
+      }
+      mediaQueryList.addEventListener('change', handleMediaChange)
+      setIsDarkTheme(mediaQueryList.matches)
+      setIsUpdateBlocked(false)
+      return () => {
+        mediaQueryList.removeEventListener('change', handleMediaChange)
+      }
+    } else {
+      setIsDarkTheme(false)
+    }
+    setIsUpdateBlocked(false)
+  }, [])
+
+  useEffect(() => {
+    if (document != null) {
+      if (isUpdateBlocked) return
+      if (isDarkTheme) {
+        document.body.classList.add('theme-dark')
+        document.body.classList.add('dark')
+        document.body.classList.remove('theme-light')
+      } else {
+        document.body.classList.remove('theme-dark')
+        document.body.classList.remove('dark')
+        document.body.classList.add('theme-light')
+      }
+    }
+  }, [isDarkTheme, isUpdateBlocked])
 
   useEffect(() => {
     HEADER_DROPDOWNS.forEach(({ title }: { title: string }) => {
@@ -56,14 +116,15 @@ export const Header = ({
   }, [])
 
   return (
-    <header className="not-prose bg-white">
+    <header className={classNames('not-prose bg-white', { dark: isDarkTheme })}>
       <nav
         className={classNames(
           'flex',
           'flex-wrap',
           'items-center',
           'justify-between',
-          'py-4'
+          'py-4',
+          'dark:bg-[#1f2a37]'
         )}
       >
         <div
@@ -75,7 +136,7 @@ export const Header = ({
             'justify-between'
           )}
         >
-          <Logo />
+          <Logo fill={isDarkTheme ? 'white' : 'black'} />
           <div className="flex gap-4 justify-between items-center">
             <div className="flex desktop:order-3">
               {showSubscribe && (
@@ -161,8 +222,27 @@ export const Header = ({
                 ))}
               </ul>
             </div>
-            {children != null && (
+            {showThemeToggler && (
               <div className="hidden desktop:block desktop:order-2">
+                <button
+                  className={classNames(
+                    'mr-4',
+                    'p-2',
+                    'rounded-full',
+                    'bg-[#f3f4f6]',
+                    'hover:bg-[#e5e7eb]',
+                    'dark:bg-[#374151]',
+                    'dark:hover:bg-[#4b5563]',
+                    'dark:text-white'
+                  )}
+                  onClick={toggleTheme}
+                >
+                  {isDarkTheme ? <TbSun /> : <TbMoon />}
+                </button>
+              </div>
+            )}
+            {children != null && (
+              <div className="hidden desktop:block desktop:order-2 dark:text-white">
                 {children}
               </div>
             )}

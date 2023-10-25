@@ -33,7 +33,10 @@ export const NavDropdown = ({
           'ease-in-out',
           'duration-300',
           'hover:text-blue-700',
-          'hover:bg-slate-100'
+          'hover:bg-slate-100',
+          'dark:hover:text-blue-700',
+          'dark:hover:bg-slate-100',
+          'dark:text-white'
         )}
       >
         <div

@@ -15,7 +15,8 @@ export default {
       tablet: '768px',
       desktop: '1024px',
       full: '1440px'
-    }
+    },
+    darkMode: 'class'
   },
   plugins: [require('flowbite/plugin')]
 }
