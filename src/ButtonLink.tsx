@@ -52,6 +52,9 @@ export const ButtonLink = ({
       className={classNames(
         'static-link',
         'not-prose',
+        'dark:bg-white',
+        'dark:!text-black',
+        `dark:hover:bg-slate-200`,
         ...buttonClassNames,
         background,
         focusBackground,
