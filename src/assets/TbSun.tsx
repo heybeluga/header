@@ -1,4 +1,4 @@
-const TbMoon = (): React.ReactNode => (
+const TbSun = (): React.ReactNode => (
   <svg
     stroke="currentColor"
     fill="none"
@@ -16,4 +16,4 @@ const TbMoon = (): React.ReactNode => (
   </svg>
 )
 
-export default TbMoon
+export default TbSun
