@@ -1425,7 +1425,11 @@ export const HEADER_DROPDOWNS: HeaderDropdown[] = [
         imageUrl:
           'https://heybeluga.com/images/external/fae36277-9d16-4e8f-87df-996b70573955.png'
       }
-    ]
+    ],
+    moreLink: {
+      href: 'https://heybeluga.com/articles/',
+      text: 'View All Articles'
+    }
   },
   {
     title: 'Compare',
@@ -1455,7 +1459,16 @@ export const HEADER_DROPDOWNS: HeaderDropdown[] = [
         imageUrl:
           'https://heybeluga.com/images/external/456613e8-ca45-432e-a78c-5d81b887baa2.png'
       }
-    ]
+    ],
+    moreLink: {
+      href: 'https://heybeluga.com/comparisons/',
+      text: 'View All Comparisons'
+    }
   },
-  { title: 'Learn', body: LEARN_COLUMNS, articleLinks: [] }
+  {
+    title: 'Learn',
+    body: LEARN_COLUMNS,
+    articleLinks: [],
+    moreLink: { href: '', text: '' }
+  }
 ]

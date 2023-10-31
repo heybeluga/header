@@ -10,7 +10,8 @@ import type { HeaderDropdown, Link, NavDropdownColumnProps } from './types'
 export const NavDropdown = ({
   title,
   body,
-  articleLinks
+  articleLinks,
+  moreLink
 }: HeaderDropdown): React.JSX.Element => {
   return (
     <li className="w-full">
@@ -80,9 +81,9 @@ export const NavDropdown = ({
                   'text-center',
                   'text-blue-500'
                 )}
-                href="https://heybeluga.com/articles/"
+                href={moreLink.href}
               >
-                View All Articles
+                {moreLink.text}
               </a>
             </div>
           )}
