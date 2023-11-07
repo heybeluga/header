@@ -1,12 +1,14 @@
 import './main.css'
-
-import { render } from 'react-dom'
+import { StrictMode } from 'react'
 import { Header } from './Header'
+import { createRoot } from 'react-dom/client'
 
-// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-render(
-  <Header showSubscribe={true} showThemeToggler={true}>
-    <p>Hello, world!</p>
-  </Header>,
-  document.getElementById('app')
+const root = createRoot(document.getElementById('app') as HTMLElement)
+
+root.render(
+  <StrictMode>
+    <Header showSubscribe={true} showThemeToggler={true}>
+      <p>Hello, world!</p>
+    </Header>
+  </StrictMode>
 )

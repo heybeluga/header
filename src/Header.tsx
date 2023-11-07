@@ -174,11 +174,11 @@ export const Header = ({
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
-                    stroke-width="2"
+                    strokeWidth="2"
                     stroke="currentColor"
                     fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   >
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                     <path d="M18 6l-12 12"></path>
@@ -191,11 +191,11 @@ export const Header = ({
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
-                    stroke-width="2"
+                    strokeWidth="2"
                     stroke="currentColor"
                     fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   >
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                     <path d="M4 6l16 0"></path>
@@ -218,7 +218,7 @@ export const Header = ({
             >
               <ul className="flex items-center gap-4">
                 {HEADER_DROPDOWNS.map((headerDropdown: HeaderDropdown) => (
-                  <NavDropdown {...headerDropdown} />
+                  <NavDropdown key={headerDropdown.title} {...headerDropdown} />
                 ))}
               </ul>
             </div>
@@ -237,6 +237,8 @@ export const Header = ({
                   )}
                   onClick={toggleTheme}
                 >
+                  {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+                  {/* @ts-expect-error */}
                   {isDarkTheme ? <TbSun /> : <TbMoon />}
                 </button>
               </div>
