@@ -5,22 +5,25 @@ import { ButtonLink } from './ButtonLink'
 import { Logo } from './Logo'
 import { NavDropdown } from './NavDropdown'
 import { NavHamburger } from './NavHamburger'
-import { HEADER_DROPDOWNS } from './header-content'
-import { type HeaderDropdown } from './types'
-import { mainDivClassNames } from './utils'
-import TbSun from './assets/TbSun'
 import TbMoon from './assets/TbMoon'
+import TbSun from './assets/TbSun'
+import { HEADER_DROPDOWNS } from './header-content'
+import { mainDivClassNames } from './utils'
+
+import type { HeaderDropdown } from './types'
 
 interface Props {
+  forceLightTheme?: boolean
   showSubscribe?: boolean
-  children?: React.ReactNode
   showThemeToggler?: boolean
+  children?: React.ReactNode
 }
 
 export const Header = ({
+  forceLightTheme = false,
   showSubscribe = true,
-  children,
-  showThemeToggler = false
+  showThemeToggler = false,
+  children
 }: Props): React.JSX.Element => {
   const [isOpen, setIsOpen] = useState(false)
   const [isDarkTheme, setIsDarkTheme] = useState<boolean>(false)
@@ -39,6 +42,11 @@ export const Header = ({
   }, [])
 
   useEffect(() => {
+    if (forceLightTheme) {
+      setIsDarkTheme(false)
+      return
+    }
+
     const cachedTheme = localStorage?.getItem('theme_flag')
     if (cachedTheme === 'dark') {
       setIsDarkTheme(true)
@@ -237,8 +245,6 @@ export const Header = ({
                   )}
                   onClick={toggleTheme}
                 >
-                  {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
-                  {/* @ts-expect-error */}
                   {isDarkTheme ? <TbSun /> : <TbMoon />}
                 </button>
               </div>
