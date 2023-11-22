@@ -28,7 +28,7 @@ export const AccordionDropdown = ({
         aria-expanded={expanded}
       >
         {titleChild}
-        <div className="p-2 rounded-lg group-hover:bg-slate-100">
+        <div className="p-2 rounded-lg group-hover:bg-slate-100 dark:group-hover:bg-slate-600">
           <svg
             data-accordion-icon
             className={classNames(
@@ -38,6 +38,7 @@ export const AccordionDropdown = ({
               'transition-transform',
               'ease-in-out',
               'duration-300',
+              'dark:fill-slate-400',
               'group-hover:fill-blue-500'
             )}
             fill="currentColor"

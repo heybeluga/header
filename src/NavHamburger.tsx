@@ -11,8 +11,8 @@ export const NavHamburger = (): React.JSX.Element => {
     <ul
       id="nav-hamburger-accordion"
       data-accordion="collapse"
-      className="list-none pl-0"
-      data-active-classes="bg-slate-50 text-blue-500"
+      className="list-none pt-3 pl-0"
+      data-active-classes="bg-slate-50 dark:bg-slate-700"
       data-inactive-classes="bg-none"
     >
       {HEADER_DROPDOWNS.map(
@@ -39,7 +39,8 @@ export const NavHamburger = (): React.JSX.Element => {
                     'font-semibold',
                     'text-xl',
                     'text-left',
-                    '!text-slate-800'
+                    'text-slate-800',
+                    'dark:text-slate-300'
                   )}
                 >
                   {title}

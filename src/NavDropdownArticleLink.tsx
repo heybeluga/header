@@ -23,8 +23,13 @@ export const NavDropdownArticleLink = ({
           'desktop:border-slate-300',
           'text-slate-800',
           'hover:text-slate-500',
+          'hover:bg-slate-50',
           'bg-white',
-          'hover:bg-slate-50'
+          'dark:desktop:border-slate-800',
+          'dark:text-slate-200',
+          'dark:hover:text-white',
+          'dark:bg-slate-600',
+          'dark:hover:bg-slate-500'
         )}
         href={href}
       >
@@ -35,7 +40,6 @@ export const NavDropdownArticleLink = ({
             'flex',
             'object-cover',
             'overflow-hidden',
-            'bg-slate-100',
             'rounded-xl'
           )}
         >

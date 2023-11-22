@@ -35,9 +35,9 @@ export const NavDropdown = ({
           'duration-300',
           'hover:text-blue-700',
           'hover:bg-slate-100',
-          'dark:hover:text-blue-700',
-          'dark:hover:bg-slate-100',
-          'dark:text-white'
+          'dark:text-slate-200',
+          'dark:hover:text-white',
+          'dark:hover:bg-slate-700'
         )}
       >
         <div
@@ -49,7 +49,17 @@ export const NavDropdown = ({
         {capitalize(title)}
       </button>
       <div id={`dropdown-${title}`} className="z-10 hidden overflow-hidden">
-        <div className="flex rounded-xl border border-slate-200 bg-white">
+        <div
+          className={classNames(
+            'flex',
+            'rounded-xl',
+            'border',
+            'border-slate-200',
+            'dark:border-slate-800',
+            'bg-white',
+            'dark:bg-slate-700'
+          )}
+        >
           <ul
             className={classNames(
               'no-anchor',
@@ -66,8 +76,20 @@ export const NavDropdown = ({
             ))}
           </ul>
           {articleLinks.length > 0 && (
-            <div className="flex flex-col gap-4 p-6 bg-slate-100 rounded-r-xl">
-              <h3 className="text-lg font-bold">Popular Articles</h3>
+            <div
+              className={classNames(
+                'flex',
+                'flex-col',
+                'gap-4',
+                'p-6',
+                'rounded-r-xl',
+                'bg-slate-100',
+                'dark:bg-slate-800'
+              )}
+            >
+              <h3 className="text-lg font-bold dark:text-white">
+                Popular Articles
+              </h3>
               <ul className="flex flex-col gap-4">
                 {articleLinks.map((link: Link) => (
                   <NavDropdownArticleLink key={link.href} {...link} />

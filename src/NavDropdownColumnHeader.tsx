@@ -31,9 +31,14 @@ export const NavDropdownColumnHeader = ({
             'rounded-3xl',
             'border',
             'border-transparent',
+            'bg-transparent',
             'desktop:border-slate-300',
             'text-slate-800',
             'hover:text-slate-500',
+            'dark:desktop:border-slate-800',
+            'dark:text-slate-200',
+            'dark:hover:text-white',
+            'dark:hover:bg-slate-500',
             hoverBackground
           )}
           href={groupHref}
@@ -53,7 +58,8 @@ export const NavDropdownColumnHeader = ({
             'p-4',
             'border',
             'border-transparent',
-            'desktop:border-slate-300'
+            'desktop:border-slate-300',
+            'dark:desktop:border-slate-800'
           )}
         >
           <NavDropdownColumnHeaderContent

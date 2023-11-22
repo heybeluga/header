@@ -22,8 +22,9 @@ export const NavDropdownColumnHeaderContent = ({
             'flex',
             'items-center',
             'justify-center',
+            'rounded-xl',
             'bg-slate-100',
-            'rounded-xl'
+            'dark:bg-slate-800'
           )}
         >
           {image}

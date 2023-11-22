@@ -131,8 +131,8 @@ export const Header = ({
           'flex-wrap',
           'items-center',
           'justify-between',
-          'py-4',
-          'dark:bg-[#1f2a37]'
+          'py-3',
+          'dark:bg-slate-800'
         )}
       >
         <div
@@ -171,7 +171,10 @@ export const Header = ({
                   'hover:text-blue-500',
                   'rounded-lg',
                   'desktop:hidden',
-                  'hover:bg-slate-100'
+                  'hover:bg-slate-100',
+                  'dark:text-slate-400',
+                  'dark:hover:bg-slate-600',
+                  'dark:hover:text-blue-500'
                 )}
               >
                 <span className="sr-only">Open main menu</span>
