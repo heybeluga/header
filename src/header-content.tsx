@@ -6,7 +6,6 @@ const TOOLS_COLUMNS: NavDropdownColumnProps[] = [
     subtitle: 'Your home for your crypto',
     groupHref: 'https://dashboard.heybeluga.com/',
     hoverBackground: 'hover:bg-blue-50',
-    links: [],
     hasHeader: true,
     image: (
       <svg
@@ -78,7 +77,6 @@ const TOOLS_COLUMNS: NavDropdownColumnProps[] = [
     subtitle: 'Compare market caps of crypto assets',
     groupHref: 'https://marketcap.heybeluga.com/',
     hoverBackground: 'hover:bg-red-50',
-    links: [],
     hasHeader: true,
     image: (
       <svg
@@ -208,7 +206,6 @@ const TOOLS_COLUMNS: NavDropdownColumnProps[] = [
     subtitle: 'Upcoming crypto events',
     groupHref: 'https://calendar.heybeluga.com/',
     hoverBackground: 'hover:bg-green-50',
-    links: [],
     hasHeader: true,
     image: (
       <svg
@@ -400,7 +397,6 @@ const COMPARE_COLUMNS: NavDropdownColumnProps[] = [
     title: 'Decentralized Exchanges',
     groupHref: 'https://heybeluga.com/comparisons/decentralized-exchanges/',
     hoverBackground: 'hover:bg-violet-100',
-    links: [],
     hasHeader: true,
     image: (
       <svg
@@ -593,7 +589,6 @@ const COMPARE_COLUMNS: NavDropdownColumnProps[] = [
     title: 'Crypto Tax Software',
     groupHref: 'https://heybeluga.com/comparisons/crypto-tax-software/',
     hoverBackground: 'hover:bg-yellow-100',
-    links: [],
     hasHeader: true,
     image: (
       <svg
@@ -729,7 +724,6 @@ const COMPARE_COLUMNS: NavDropdownColumnProps[] = [
     title: 'NFT Marketplaces',
     groupHref: 'https://heybeluga.com/comparisons/nft-marketplaces/',
     hoverBackground: 'hover:bg-orange-100',
-    links: [],
     hasHeader: true,
     image: (
       <svg
@@ -867,7 +861,6 @@ const COMPARE_COLUMNS: NavDropdownColumnProps[] = [
     groupHref:
       'https://heybeluga.com/comparisons/centralized-crypto-staking-platforms/',
     hoverBackground: 'hover:bg-lime-100',
-    links: [],
     hasHeader: true,
     image: (
       <svg
@@ -1017,7 +1010,6 @@ const COMPARE_COLUMNS: NavDropdownColumnProps[] = [
     title: 'Public Stocks',
     groupHref: 'https://heybeluga.com/comparisons/crypto-stocks/',
     hoverBackground: 'hover:bg-lime-100',
-    links: [],
     hasHeader: true,
     image: (
       <svg
@@ -1142,7 +1134,6 @@ const LEARN_COLUMNS: NavDropdownColumnProps[] = [
     title: 'Concepts',
     groupHref: 'https://heybeluga.com/categories/concepts/',
     hoverBackground: 'hover:bg-slate-50',
-    links: [],
     hasHeader: true,
     image: (
       <svg
@@ -1163,7 +1154,6 @@ const LEARN_COLUMNS: NavDropdownColumnProps[] = [
     title: 'Tools',
     groupHref: 'https://heybeluga.com/categories/tools/',
     hoverBackground: 'hover:bg-slate-50',
-    links: [],
     hasHeader: true,
     image: (
       <svg
@@ -1184,7 +1174,6 @@ const LEARN_COLUMNS: NavDropdownColumnProps[] = [
     title: 'Protocols',
     groupHref: 'https://heybeluga.com/categories/protocols/',
     hoverBackground: 'hover:bg-slate-50',
-    links: [],
     hasHeader: true,
     image: (
       <svg
@@ -1236,7 +1225,6 @@ const LEARN_COLUMNS: NavDropdownColumnProps[] = [
     title: 'Opinion',
     groupHref: 'https://heybeluga.com/categories/opinion/',
     hoverBackground: 'hover:bg-slate-50',
-    links: [],
     hasHeader: true,
     image: (
       <svg
@@ -1257,7 +1245,6 @@ const LEARN_COLUMNS: NavDropdownColumnProps[] = [
     title: 'Blockchains',
     groupHref: 'https://heybeluga.com/categories/blockchains/',
     hoverBackground: 'hover:bg-slate-50',
-    links: [],
     hasHeader: true,
     image: (
       <svg
@@ -1278,7 +1265,6 @@ const LEARN_COLUMNS: NavDropdownColumnProps[] = [
     title: 'Token',
     groupHref: 'https://heybeluga.com/categories/token/',
     hoverBackground: 'hover:bg-slate-50',
-    links: [],
     hasHeader: true,
     image: (
       <svg
@@ -1299,7 +1285,6 @@ const LEARN_COLUMNS: NavDropdownColumnProps[] = [
     title: 'NFT',
     groupHref: 'https://heybeluga.com/categories/nft/',
     hoverBackground: 'hover:bg-slate-50',
-    links: [],
     hasHeader: true,
     image: (
       <svg
@@ -1320,7 +1305,6 @@ const LEARN_COLUMNS: NavDropdownColumnProps[] = [
     title: 'News',
     groupHref: 'https://heybeluga.com/categories/news/',
     hoverBackground: 'hover:bg-slate-50',
-    links: [],
     hasHeader: true,
     image: (
       <svg
@@ -1341,7 +1325,6 @@ const LEARN_COLUMNS: NavDropdownColumnProps[] = [
     title: 'Glossary',
     groupHref: 'https://heybeluga.com/categories/glossary/',
     hoverBackground: 'hover:bg-slate-50',
-    links: [],
     hasHeader: true,
     image: (
       <svg
@@ -1362,7 +1345,6 @@ const LEARN_COLUMNS: NavDropdownColumnProps[] = [
     title: 'Trading',
     groupHref: 'https://heybeluga.com/categories/trading/',
     hoverBackground: 'hover:bg-slate-50',
-    links: [],
     hasHeader: true,
     image: (
       <svg
@@ -1383,7 +1365,6 @@ const LEARN_COLUMNS: NavDropdownColumnProps[] = [
     title: 'Wallets',
     groupHref: 'https://heybeluga.com/categories/wallets/',
     hoverBackground: 'hover:bg-slate-50',
-    links: [],
     hasHeader: true,
     image: (
       <svg

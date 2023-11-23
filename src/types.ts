@@ -15,7 +15,6 @@ export interface NavDropdownColumnProps {
   title: string
   subtitle?: string
   groupHref?: string
-  links: Link[]
   hoverBackground?: string
   hasHeader?: boolean
   image?: React.JSX.Element
