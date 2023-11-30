@@ -4,12 +4,14 @@ import { Chevron } from './Chevron'
 import { NavDropdownColumn } from './NavDropdownColumn'
 import { capitalize } from './utils'
 
+import { ButtonLink } from './ButtonLink'
 import { NavDropdownArticleLink } from './NavDropdownArticleLink'
 import type { HeaderDropdown, Link, NavDropdownColumnProps } from './types'
 
 export const NavDropdown = ({
   title,
   body,
+  bodyStyle,
   articleLinks,
   moreLink
 }: HeaderDropdown): React.JSX.Element => {
@@ -57,13 +59,14 @@ export const NavDropdown = ({
             'border-slate-200',
             'dark:border-slate-800',
             'bg-white',
-            'dark:bg-slate-700'
+            'dark:bg-slate-700',
+            { 'flex-col': articleLinks.length === 0 }
           )}
         >
           <ul
             className={classNames(
               'no-anchor',
-              articleLinks.length > 0 ? 'flex flex-col' : 'grid grid-cols-4',
+              bodyStyle,
               'w-auto',
               'p-6',
               'gap-x-4',
@@ -75,7 +78,22 @@ export const NavDropdown = ({
               <NavDropdownColumn key={columnProps.title} {...columnProps} />
             ))}
           </ul>
-          {articleLinks.length > 0 && (
+          {articleLinks.length === 0 ? (
+            <div className="px-6 pb-6">
+              <ButtonLink
+                href={moreLink.href}
+                text={moreLink.text}
+                background="bg-slate-100"
+                darkBackground="dark:bg-slate-800"
+                darkFocusBackground="dark:hover:bg-slate-600"
+                darkHoverBackground="dark:hover:bg-slate-600"
+                darkTextColour="dark:!text-white"
+                focusBackground="focus:bg-slate-200"
+                hoverBackground="hover:bg-slate-200"
+                textColour="!text-black"
+              />
+            </div>
+          ) : (
             <div
               className={classNames(
                 'flex',

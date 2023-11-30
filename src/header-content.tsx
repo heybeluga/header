@@ -1387,6 +1387,7 @@ export const HEADER_DROPDOWNS: HeaderDropdown[] = [
   {
     title: 'Tools',
     body: TOOLS_COLUMNS,
+    bodyStyle: 'flex flex-col',
     articleLinks: [
       {
         href: 'https://heybeluga.com/articles/bitcoin-gold/',
@@ -1415,32 +1416,8 @@ export const HEADER_DROPDOWNS: HeaderDropdown[] = [
   {
     title: 'Compare',
     body: COMPARE_COLUMNS,
-    articleLinks: [
-      {
-        href: 'https://heybeluga.com/articles/solana-mobile/',
-        text: "Solana's Saga Mobile Phone: A Vibrant Crypto Ecosystem",
-        imageUrl:
-          'https://heybeluga.com/images/external/5188ebb1-cfde-4ccc-a859-15c367ec6ea9.png'
-      },
-      {
-        href: 'https://heybeluga.com/articles/pudgy-penguins-nfts-toys/',
-        text: 'Can Pudgy Penguins NFTs Create a Successful Toy Business and Create Value for Holders?',
-        imageUrl:
-          'https://heybeluga.com/images/external/e17657ef-bfe7-4135-a869-afaa17f59075.png'
-      },
-      {
-        href: 'https://heybeluga.com/articles/sbf-jail/',
-        text: 'A Glimpse into SBF’s Life Inside the Metropolitan Detention Center in Brooklyn',
-        imageUrl:
-          'https://heybeluga.com/images/external/39c5f505-0467-44d5-a34d-0c50b36b3ed7.png'
-      },
-      {
-        href: 'https://heybeluga.com/articles/vara-network/',
-        text: 'Vara Network: On-Chain Game Building With Smart Contracts',
-        imageUrl:
-          'https://heybeluga.com/images/external/456613e8-ca45-432e-a78c-5d81b887baa2.png'
-      }
-    ],
+    bodyStyle: 'grid grid-cols-2',
+    articleLinks: [],
     moreLink: {
       href: 'https://heybeluga.com/comparisons/',
       text: 'View All Comparisons'
@@ -1449,7 +1426,11 @@ export const HEADER_DROPDOWNS: HeaderDropdown[] = [
   {
     title: 'Learn',
     body: LEARN_COLUMNS,
+    bodyStyle: 'grid grid-cols-4',
     articleLinks: [],
-    moreLink: { href: '', text: '' }
+    moreLink: {
+      href: 'https://heybeluga.com/articles/',
+      text: 'View All Guides'
+    }
   }
 ]

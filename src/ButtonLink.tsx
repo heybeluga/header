@@ -21,6 +21,10 @@ const buttonClassNames: string[] = [
 
 interface Props extends Link {
   background?: string
+  darkBackground?: string
+  darkFocusBackground?: string
+  darkHoverBackground?: string
+  darkTextColour?: string
   focusBackground?: string
   fontSize?: string
   hoverBackground?: string
@@ -35,6 +39,10 @@ export const ButtonLink = ({
   href,
   text,
   background = 'bg-slate-800',
+  darkBackground = 'dark:bg-white',
+  darkFocusBackground = 'dark:focus:bg-slate-200',
+  darkHoverBackground = 'dark:hover:bg-slate-200',
+  darkTextColour = 'dark:!text-black',
   focusBackground = 'focus:bg-slate-600',
   fontSize = 'text-base',
   hoverBackground = 'hover:bg-slate-600',
@@ -52,11 +60,12 @@ export const ButtonLink = ({
       className={classNames(
         'static-link',
         'not-prose',
-        'dark:bg-white',
-        'dark:!text-black',
-        `dark:hover:bg-slate-200`,
         ...buttonClassNames,
         background,
+        darkBackground,
+        darkFocusBackground,
+        darkHoverBackground,
+        darkTextColour,
         focusBackground,
         fontSize,
         hoverBackground,

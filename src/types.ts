@@ -1,6 +1,7 @@
 export interface HeaderDropdown {
   title: string
   body: NavDropdownColumnProps[]
+  bodyStyle: string
   articleLinks: Link[]
   moreLink: Link
 }
