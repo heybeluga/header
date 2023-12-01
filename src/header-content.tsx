@@ -394,6 +394,294 @@ const TOOLS_COLUMNS: NavDropdownColumnProps[] = [
 ]
 const COMPARE_COLUMNS: NavDropdownColumnProps[] = [
   {
+    title: 'Crypto IRAs',
+    groupHref: 'https://heybeluga.com/comparisons/crypto-iras/',
+    hoverBackground: 'hover:bg-sky-100',
+    hasHeader: true,
+    image: (
+      <svg
+        width="400"
+        height="400"
+        viewBox="0 0 400 400"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M176.835 189.865L289.244 224.215L300.372 217.572L189.077 183.222L176.835 189.865ZM298.926 211.686L286.223 215.073L287.738 220.68L300.441 217.302L298.926 211.686Z"
+          fill="#8F785D"
+          stroke="black"
+          stroke-width="1.74143"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M289.069 223.771L287.833 218.407Z"
+          fill="#8F785D"
+        />
+        <path
+          d="M289.069 223.771L287.833 218.407"
+          stroke="black"
+          stroke-width="1.74143"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M176.069 185.094L287.834 218.407L298.979 211.799L188.312 178.442L176.069 185.094Z"
+          fill="#F8F4E6"
+          stroke="black"
+          stroke-width="1.74143"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M251.525 207.584L176.069 185.094L188.312 178.442L261.983 200.645L251.525 207.584Z"
+          fill="#89A2B0"
+          stroke="black"
+          stroke-width="1.74143"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M172.603 64.9878L165.751 69.1064L290.324 280.576L302.096 288.021L172.603 64.9878Z"
+          fill="#8F785C"
+          stroke="black"
+          stroke-width="1.74143"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M179.021 61L172.177 65.1185L301.669 288.152L308.522 284.033L179.021 61Z"
+          fill="#E1ECF2"
+          stroke="black"
+          stroke-width="1.74143"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M172.7 75.0358L92.7427 121.001C92.3094 121.248 91.9292 121.578 91.624 121.973C91.3188 122.367 91.0947 122.818 90.9644 123.3C90.8341 123.781 90.8003 124.284 90.8649 124.778C90.9295 125.273 91.0913 125.75 91.3408 126.181C91.8509 127.052 92.6842 127.686 93.6593 127.945C94.6345 128.205 95.6726 128.068 96.5477 127.566L176.505 81.601C176.938 81.3542 177.317 81.0242 177.621 80.6301C177.926 80.2361 178.149 79.7857 178.279 79.3049C178.408 78.8242 178.441 78.3225 178.376 77.8289C178.311 77.3353 178.148 76.8595 177.898 76.4289C177.391 75.5576 176.56 74.9222 175.586 74.6612C174.613 74.4002 173.575 74.5348 172.7 75.0358Z"
+          fill="#E1ECF2"
+          stroke="black"
+          stroke-width="1.74143"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M280.494 218.843L181.677 275.213C181.244 275.455 180.864 275.78 180.558 276.171C180.252 276.561 180.028 277.009 179.897 277.487C179.767 277.966 179.733 278.465 179.798 278.957C179.863 279.448 180.025 279.922 180.275 280.35C180.789 281.219 181.625 281.851 182.601 282.108C183.577 282.366 184.615 282.228 185.491 281.726L284.317 225.356C284.75 225.114 285.13 224.788 285.435 224.398C285.741 224.007 285.965 223.56 286.096 223.082C286.226 222.603 286.26 222.104 286.195 221.612C286.13 221.121 285.968 220.647 285.719 220.219C285.203 219.35 284.366 218.718 283.388 218.461C282.411 218.204 281.371 218.341 280.494 218.843Z"
+          fill="#E1ECF2"
+          stroke="black"
+          stroke-width="1.74143"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M161.597 79.825L94.8223 117.501C94.8223 117.501 99.5589 115.524 102.119 123.204C110.8 149.264 135.685 207.637 158.82 239.61C177.723 265.748 198.568 257.398 206.918 260.115C213.762 262.344 211.759 268.587 211.759 268.587L284.028 227.193C284.028 227.193 288.077 218.321 279.57 218.329C270.819 218.347 237.079 215.97 224.271 201.185C197.871 170.728 175.92 107.714 168.049 83.2208C166.029 76.9256 161.597 79.825 161.597 79.825Z"
+          fill="#3CB2DC"
+          stroke="black"
+          stroke-width="1.74143"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M83.8525 114.836L77 118.946L201.573 330.425L213.345 337.869L83.8525 114.836Z"
+          fill="#8F785C"
+          stroke="black"
+          stroke-width="1.74143"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M90.2783 110.848L83.4258 114.958L212.918 338L219.771 333.882L90.2783 110.848Z"
+          fill="#E1ECF2"
+          stroke="black"
+          stroke-width="1.74143"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M131.297 210.24L84.1044 239.383L205.421 277.059L216.549 270.415L106.447 236.37L135.685 218.947M215.582 264.651L201.546 266.714L203.714 273.419L216.409 270.432L215.582 264.651ZM97.5134 231.207L83.4775 234.098L83.8867 239.47L98.0011 236.64L97.5134 231.207Z"
+          fill="#8F785C"
+        />
+        <path
+          d="M131.297 210.24L84.1044 239.383L205.421 277.059L216.549 270.415L106.447 236.37L135.685 218.947M215.582 264.651L201.546 266.714L203.714 273.419L216.409 270.432L215.582 264.651ZM97.5134 231.207L83.4775 234.098L83.8867 239.47L98.0011 236.64L97.5134 231.207Z"
+          stroke="black"
+          stroke-width="1.74143"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M204.856 271.26L205.675 277.041Z"
+          fill="#8F785C"
+        />
+        <path
+          d="M204.856 271.26L205.675 277.041"
+          stroke="black"
+          stroke-width="1.74143"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M129.322 206.148L83.6963 233.845L205.004 271.521L216.14 264.869L107.066 231.625L133.78 215.012"
+          fill="#E1ECF2"
+        />
+        <path
+          d="M129.322 206.148L83.6963 233.845L205.004 271.521L216.14 264.869L107.066 231.625L133.78 215.012"
+          stroke="black"
+          stroke-width="1.74143"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M185.787 126.4C185.787 126.4 206.388 140.227 217.655 153.993C228.922 167.759 230.42 172.173 230.42 172.173C230.42 172.173 225.613 177.293 214.364 169.561C203.393 162.012 193.606 159.426 185.491 145.268C185.491 145.268 175.704 125.407 185.787 126.4Z"
+          fill="white"
+          stroke="black"
+          stroke-width="1.74143"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M189.495 129.003C191.367 130.344 193.814 132.155 196.557 134.297C204.801 145.792 211.695 158.197 217.105 171.268C216.235 170.78 215.329 170.223 214.363 169.561C208.572 165.573 203.113 162.961 198.045 159.304L189.495 129.003Z"
+          fill="black"
+          stroke="black"
+          stroke-width="1.74143"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M188.807 91.3274C188.807 91.3274 186.665 69.5597 159.264 73.1035C129.904 76.9085 121.823 111.101 123.103 135.821C125.115 174.524 140.648 207.245 177.601 233.689C217.149 261.987 269.758 251.121 269.758 251.121C269.758 251.121 261.494 283.085 288.025 286.202C288.025 286.202 282.235 283.912 289.514 270.224C297.498 255.213 289.732 246.924 289.749 246.924C289.749 246.924 304.995 240.812 312.118 230.328C319.24 219.845 322.497 221.194 322.497 221.194C322.497 221.194 304.917 214.333 277.733 237.181C277.733 237.181 224.158 225.278 216.827 195.282C206.413 152.695 183.217 121.028 183.217 121.028C183.217 121.028 197.845 114.776 199.404 107.357C201.581 96.9784 188.807 91.3274 188.807 91.3274Z"
+          fill="white"
+          stroke="black"
+          stroke-width="1.74143"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M166.709 102.952C167.536 102.943 168.39 103.936 168.616 105.163C168.842 106.391 168.363 107.392 167.536 107.401C166.709 107.41 165.856 106.408 165.629 105.181C165.403 103.953 165.882 102.952 166.709 102.952Z"
+          fill="black"
+          stroke="black"
+          stroke-width="1.74143"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M167.317 98.3714C167.317 98.3714 181.458 98.1886 188.632 91.6321"
+          stroke="black"
+          stroke-width="1.74143"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M167.797 115.107C167.797 115.107 174.432 116.613 185.838 113.026C198.942 108.907 199.482 102.046 199.482 102.046"
+          stroke="black"
+          stroke-width="1.74143"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M175.251 123.17C175.251 123.17 179.204 123.187 187.659 118.825Z"
+          fill="white"
+        />
+        <path
+          d="M175.251 123.17C175.251 123.17 179.204 123.187 187.659 118.825"
+          stroke="black"
+          stroke-width="1.74143"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M184.437 168.168C184.437 170.658 180.928 172.678 176.6 172.678C172.273 172.678 168.764 170.658 168.764 168.168C168.764 168.09 168.781 168.02 168.781 167.95H168.764V150.371H184.437V167.95H184.419C184.43 168.022 184.435 168.095 184.437 168.168Z"
+          fill="white"
+          stroke="black"
+          stroke-width="1.74143"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M182.529 167.018C182.486 168.847 179.856 170.319 176.617 170.319C173.378 170.319 170.749 168.847 170.705 167.018H170.696V159.896H182.538V167.018H182.529Z"
+          fill="#E57429"
+          stroke="black"
+          stroke-width="1.74143"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M176.617 156.544C179.882 156.544 182.538 158.033 182.538 159.87C182.538 161.707 179.882 163.187 176.617 163.187C173.352 163.187 170.696 161.698 170.696 159.87C170.696 158.041 173.343 156.544 176.617 156.544Z"
+          fill="#F28F4E"
+          stroke="black"
+          stroke-width="1.74143"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M176.6 146.095C180.928 146.095 184.437 148.124 184.437 150.614C184.437 153.105 180.928 155.133 176.6 155.133C172.273 155.133 168.764 153.113 168.764 150.614C168.764 148.115 172.273 146.095 176.6 146.095Z"
+          fill="white"
+          stroke="black"
+          stroke-width="1.74143"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M135.729 149.596C135.729 149.596 152.185 163.222 159.734 166.244C159.734 166.244 176.461 166.357 182.024 164.128C187.588 161.899 184.976 169.666 182.503 173.645C175.468 184.981 166.595 186.462 158.567 185.974C145.794 185.199 136.652 177.345 136.652 177.345"
+          fill="white"
+        />
+        <path
+          d="M135.729 149.596C135.729 149.596 152.185 163.222 159.734 166.244C159.734 166.244 176.461 166.357 182.024 164.128C187.588 161.899 184.976 169.666 182.503 173.645C175.468 184.981 166.595 186.462 158.567 185.974C145.794 185.199 136.652 177.345 136.652 177.345"
+          stroke="black"
+          stroke-width="1.74143"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    )
+  },
+  {
     title: 'Decentralized Exchanges',
     groupHref: 'https://heybeluga.com/comparisons/decentralized-exchanges/',
     hoverBackground: 'hover:bg-violet-100',
@@ -1009,7 +1297,7 @@ const COMPARE_COLUMNS: NavDropdownColumnProps[] = [
   {
     title: 'Public Stocks',
     groupHref: 'https://heybeluga.com/comparisons/crypto-stocks/',
-    hoverBackground: 'hover:bg-lime-100',
+    hoverBackground: 'hover:bg-red-100',
     hasHeader: true,
     image: (
       <svg
