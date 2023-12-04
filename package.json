@@ -1,6 +1,6 @@
 {
   "name": "@heybeluga/header",
-  "version": "0.0.62",
+  "version": "0.0.63",
   "description": "Common headers and footers for Beluga's webapps",
   "main": "dist/header.js",
   "types": "dist/Header.d.ts",
