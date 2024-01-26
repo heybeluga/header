@@ -5,12 +5,13 @@ import { ButtonLink } from './ButtonLink'
 import { Logo } from './Logo'
 import { NavDropdown } from './NavDropdown'
 import { NavHamburger } from './NavHamburger'
+import { NavMenuLink } from './NavMenuLink'
 import TbMoon from './assets/TbMoon'
 import TbSun from './assets/TbSun'
-import { HEADER_DROPDOWNS } from './header-content'
+import { HEADER_MENU_ITEMS } from './header-content'
 import { mainDivClassNames } from './utils'
 
-import type { HeaderDropdown } from './types'
+import type { HeaderMenuItem } from './types'
 
 interface Props {
   forceLightTheme?: boolean
@@ -89,7 +90,7 @@ export const Header = ({
   }, [isDarkTheme, isUpdateBlocked])
 
   useEffect(() => {
-    HEADER_DROPDOWNS.forEach(({ title }: { title: string }) => {
+    HEADER_MENU_ITEMS.forEach(({ title }: { title: string }) => {
       const targetElement: HTMLElement | null = document.getElementById(
         `dropdown-${title}`
       )
@@ -228,9 +229,19 @@ export const Header = ({
               )}
             >
               <ul className="flex items-center gap-4">
-                {HEADER_DROPDOWNS.map((headerDropdown: HeaderDropdown) => (
-                  <NavDropdown key={headerDropdown.title} {...headerDropdown} />
-                ))}
+                {HEADER_MENU_ITEMS.map((headerDropdown: HeaderMenuItem) =>
+                  headerDropdown.isDropdown ? (
+                    <NavDropdown
+                      key={headerDropdown.title}
+                      {...headerDropdown}
+                    />
+                  ) : (
+                    <NavMenuLink
+                      key={headerDropdown.title}
+                      {...headerDropdown}
+                    />
+                  )
+                )}
               </ul>
             </div>
             {showThemeToggler && (

@@ -6,7 +6,7 @@ import { capitalize } from './utils'
 
 import { ButtonLink } from './ButtonLink'
 import { NavDropdownArticleLink } from './NavDropdownArticleLink'
-import type { HeaderDropdown, Link, NavDropdownColumnProps } from './types'
+import type { HeaderMenuItem, Link, NavDropdownColumnProps } from './types'
 
 export const NavDropdown = ({
   title,
@@ -14,7 +14,7 @@ export const NavDropdown = ({
   bodyStyle,
   articleLinks,
   moreLink
-}: HeaderDropdown): React.JSX.Element => {
+}: HeaderMenuItem): React.JSX.Element => {
   return (
     <li className="w-full">
       <button
