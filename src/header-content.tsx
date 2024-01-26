@@ -1,4 +1,4 @@
-import type { HeaderDropdown, NavDropdownColumnProps } from './types'
+import type { HeaderMenuItem, NavDropdownColumnProps } from './types'
 
 const TOOLS_COLUMNS: NavDropdownColumnProps[] = [
   {
@@ -1671,7 +1671,19 @@ const LEARN_COLUMNS: NavDropdownColumnProps[] = [
   }
 ]
 
-export const HEADER_DROPDOWNS: HeaderDropdown[] = [
+export const HEADER_MENU_ITEMS: HeaderMenuItem[] = [
+  {
+    title: 'Newsletter',
+    body: TOOLS_COLUMNS,
+    bodyStyle: 'flex flex-col',
+    articleLinks: [],
+    moreLink: {
+      href: '',
+      text: ''
+    },
+    isDropdown: false,
+    rootLink: 'https://beluga.beehiiv.com/'
+  },
   {
     title: 'Tools',
     body: TOOLS_COLUMNS,
@@ -1699,7 +1711,9 @@ export const HEADER_DROPDOWNS: HeaderDropdown[] = [
     moreLink: {
       href: 'https://heybeluga.com/articles/',
       text: 'View All Articles'
-    }
+    },
+    isDropdown: true,
+    rootLink: ''
   },
   {
     title: 'Compare',
@@ -1709,7 +1723,9 @@ export const HEADER_DROPDOWNS: HeaderDropdown[] = [
     moreLink: {
       href: 'https://heybeluga.com/comparisons/',
       text: 'View All Comparisons'
-    }
+    },
+    isDropdown: true,
+    rootLink: ''
   },
   {
     title: 'Learn',
@@ -1719,6 +1735,8 @@ export const HEADER_DROPDOWNS: HeaderDropdown[] = [
     moreLink: {
       href: 'https://heybeluga.com/articles/',
       text: 'View All Guides'
-    }
+    },
+    isDropdown: true,
+    rootLink: ''
   }
 ]

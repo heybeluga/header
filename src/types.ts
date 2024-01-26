@@ -1,9 +1,11 @@
-export interface HeaderDropdown {
+export interface HeaderMenuItem {
   title: string
   body: NavDropdownColumnProps[]
   bodyStyle: string
   articleLinks: Link[]
   moreLink: Link
+  isDropdown: boolean
+  rootLink: string
 }
 
 export interface Link {
