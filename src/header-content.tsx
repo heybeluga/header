@@ -1684,36 +1684,48 @@ export const HEADER_MENU_ITEMS: HeaderMenuItem[] = [
     isDropdown: false,
     rootLink: 'https://beluga.beehiiv.com/'
   },
+  // {
+  //   title: 'Tools',
+  //   body: TOOLS_COLUMNS,
+  //   bodyStyle: 'flex flex-col',
+  //   articleLinks: [
+  //     {
+  //       href: 'https://heybeluga.com/articles/bitcoin-gold/',
+  //       text: 'Bitcoin Gold: Everything to Know',
+  //       imageUrl:
+  //         'https://heybeluga.com/images/external/ba7e3a2f-b1c7-4d73-8a65-33f1eca963ed.png'
+  //     },
+  //     {
+  //       href: 'https://heybeluga.com/articles/ordinals-vs-ethereum-nfts/',
+  //       text: 'The Wild World of NFTs: Bitcoin Ordinals vs. Ethereum NFTs',
+  //       imageUrl:
+  //         'https://heybeluga.com/images/external/20766420-e61b-43ad-a973-ceb930436afa.png'
+  //     },
+  //     {
+  //       href: 'https://heybeluga.com/articles/origins-of-hodl/',
+  //       text: 'Origins of the Word "HODL"',
+  //       imageUrl:
+  //         'https://heybeluga.com/images/external/fae36277-9d16-4e8f-87df-996b70573955.png'
+  //     }
+  //   ],
+  //   moreLink: {
+  //     href: 'https://heybeluga.com/articles/',
+  //     text: 'View All Articles'
+  //   },
+  //   isDropdown: true,
+  //   rootLink: ''
+  // },
   {
-    title: 'Tools',
+    title: 'Starter Pack',
     body: TOOLS_COLUMNS,
     bodyStyle: 'flex flex-col',
-    articleLinks: [
-      {
-        href: 'https://heybeluga.com/articles/bitcoin-gold/',
-        text: 'Bitcoin Gold: Everything to Know',
-        imageUrl:
-          'https://heybeluga.com/images/external/ba7e3a2f-b1c7-4d73-8a65-33f1eca963ed.png'
-      },
-      {
-        href: 'https://heybeluga.com/articles/ordinals-vs-ethereum-nfts/',
-        text: 'The Wild World of NFTs: Bitcoin Ordinals vs. Ethereum NFTs',
-        imageUrl:
-          'https://heybeluga.com/images/external/20766420-e61b-43ad-a973-ceb930436afa.png'
-      },
-      {
-        href: 'https://heybeluga.com/articles/origins-of-hodl/',
-        text: 'Origins of the Word "HODL"',
-        imageUrl:
-          'https://heybeluga.com/images/external/fae36277-9d16-4e8f-87df-996b70573955.png'
-      }
-    ],
+    articleLinks: [],
     moreLink: {
-      href: 'https://heybeluga.com/articles/',
-      text: 'View All Articles'
+      href: '',
+      text: ''
     },
-    isDropdown: true,
-    rootLink: ''
+    isDropdown: false,
+    rootLink: 'https://starter.heybeluga.com/'
   },
   {
     title: 'Compare',
