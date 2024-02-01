@@ -29,6 +29,8 @@ export const NavMenuLink = ({
           'transition-transform',
           'ease-in-out',
           'duration-300',
+          'leading-[22px]',
+          'text-center',
           'hover:!text-blue-700',
           'hover:!bg-slate-100',
           'dark:!text-slate-200',
