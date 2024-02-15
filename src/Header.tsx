@@ -230,6 +230,7 @@ export const Header = ({
             >
               <ul className="flex items-center gap-4">
                 {HEADER_MENU_ITEMS.map((headerDropdown: HeaderMenuItem) =>
+                  // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
                   headerDropdown.isDropdown ? (
                     <NavDropdown
                       key={headerDropdown.title}
@@ -259,7 +260,15 @@ export const Header = ({
                   )}
                   onClick={toggleTheme}
                 >
-                  {isDarkTheme ? <TbSun /> : <TbMoon />}
+                  {isDarkTheme ? (
+                    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                    // @ts-expect-error
+                    <TbSun />
+                  ) : (
+                    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                    // @ts-expect-error
+                    <TbMoon />
+                  )}
                 </button>
               </div>
             )}
